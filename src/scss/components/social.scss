@@ -1,0 +1,23 @@
+.social {
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+
+    &__item {
+        margin: 5px;
+
+        svg {
+            @include animate(fill);
+            fill: $white;
+
+            &:hover {
+                fill: $orange;
+            }
+        }
+    }
+
+    ul {
+        @extend %listreset;
+        display: flex;
+    }
+}

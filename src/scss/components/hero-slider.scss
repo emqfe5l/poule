@@ -1,0 +1,95 @@
+.hero-slider {
+
+    &__content {
+        background-color: #f74004;
+        width: 100%;
+        height: 100%;
+
+        img {
+            margin-left: 100px;
+            vertical-align: top;
+        }
+    }
+
+    .swiper-container {
+        padding-bottom: 30px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-image: none;
+        width: 60px;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        left: 10%;
+    }
+
+    .swiper-button-next {
+        right: 10%;
+    }
+
+    .swiper-pagination {
+        bottom: 5px;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 1px solid $orange;
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+
+        &-active {
+            background-color: $orange;
+        }
+    }
+
+    .slide-content {
+        position: absolute;
+        width: 450px;
+        height: 350px;
+        top: 30px;
+        right: 30%;
+        font-family: 'grandhotel_regular';
+        background-image: url('../images/bulles.svg');
+        background-size: 100% 100%;
+        font-size: 60px;
+        padding-left: 80px;
+        padding-top: 60px;
+        text-align: center;
+        line-height: 1;
+
+        p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .stroke-wrapper {
+            display: inline-block;
+            line-height: .8;
+            text-align: center;
+            margin-right: 8px;
+
+            &:nth-of-type(1) {
+                font-family: 'grandhotel_regular';
+                text-transform: capitalize;
+                font-size: 77px;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 102px;
+                text-transform: uppercase;
+                font-family: 'campersans_regular';
+                color: $orange;
+            }
+
+            &:nth-of-type(3) {
+                font-family: 'grandhotel_regular';
+                font-size: 81px;
+                color: $orange;
+            }
+        }
+    }
+}

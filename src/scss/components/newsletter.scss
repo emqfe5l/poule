@@ -1,0 +1,27 @@
+.newsletter {
+    background-color: $orange;
+    padding: 25px 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__cta {
+        p {
+            margin-bottom: 0;
+        }
+        color: $white;
+        font-family: $alt-font-2;
+        font-size: 25px;
+        line-height: .9;
+        margin-right: 25px;
+        margin-bottom: 0;
+        .stroke-wrapper {
+            font-family: $alt-font-1;
+            font-size: 63px;
+            line-height: .7;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.footer {
+    background-color: $dark-grey;
+    display: flex;
+    align-items: center;
+
+    .container {
+        width: 1260px;
+        padding-left: 230px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        bottom: 0;
+        left: 75px;
+        img {
+            vertical-align: top;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        min-height: 107px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        ul {
+            @extend %listreset;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__nav-item {
+        margin: 0 10px;
+
+        a {
+            @include animate(color);
+            color: $white;
+            text-decoration: none;
+            font-size: 12px;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}

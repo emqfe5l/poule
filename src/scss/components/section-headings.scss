@@ -1,0 +1,13 @@
+.section-headings {
+    text-align: center;
+    color: $orange;
+    margin-bottom: 35px;
+    h2 {
+        line-height: .9;
+        margin-bottom: 5px;
+    }
+
+    &__introduction {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,74 @@
+.restauration {
+    position: relative;
+    background-image: url('../images/pattes.svg');
+    background-repeat: no-repeat;
+    min-height: 690px;
+    background-position: 350px 0;
+    padding-top: 20px;
+
+    .container {
+        position: relative;
+    }
+
+    .poule-holder {
+        position: absolute;
+        left: 580px;
+        top: 390px;
+
+        .content-block {
+            position: absolute;
+            width: 500px;
+            color: #fff;
+            background-color: $orange;
+            padding: 10px;
+            top: -130px;
+            left: -100%;
+            font-weight: 'museo';
+            font-size: 16px;
+        }
+    }
+
+
+    .section-headings {
+        padding-left: 0px;
+        position: absolute;
+        left: 460px;
+    }
+
+    h2 {
+        font-family: 'campersans_regular';
+        font-size: 102px;
+        line-height: .6;
+        font-weight: normal;
+        text-align: left;
+
+        .stroke-wrapper {
+            &:nth-of-type(1) {
+                font-family: 'grandhotel_regular';
+                text-transform: lowercase;
+                font-size: 55px;
+                line-height: 1.2;
+            }
+
+            &:nth-of-type(2) {
+
+                font-size: 58px;
+            }
+        }
+
+    }
+
+    .restautation-img-holder {
+        position: absolute;
+        top: 80px;
+        left: 880px;
+        margin-right: 30px;
+        max-width: 35%;
+        border-radius: 5% 2px 5% 5%;
+        overflow: hidden;
+        box-shadow: 0 0 10px 0 #000;
+        img {
+            vertical-align: top;
+        }
+    }
+}

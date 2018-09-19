@@ -1,0 +1,19 @@
+.btn {
+    @include animate(background-color);
+    font-family: 'campersans_regular';
+    font-size: 36px;
+    height: 40px;
+    width: 200px;
+    background-color: $dark-grey;
+    border: none;
+    border-radius: 15px;
+    color: $white;
+
+    &:hover {
+        background-color: rgba($color: $dark-grey, $alpha: .8)
+    }
+
+    &--accent {
+        background-color: $orange;
+    }
+}
