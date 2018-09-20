@@ -1,11 +1,14 @@
 .newsletter {
     background-color: $orange;
-    padding: 25px 0;
+    padding: 25px 0 55px;
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media('<tablet'){
+            flex-direction: column;
+        }
     }
 
     &__cta {
@@ -18,6 +21,9 @@
         line-height: .9;
         margin-right: 25px;
         margin-bottom: 0;
+        @include media('<tablet'){
+            margin-bottom: 20px;
+        }
         .stroke-wrapper {
             font-family: $alt-font-1;
             font-size: 63px;

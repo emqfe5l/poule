@@ -3,6 +3,12 @@
     min-height: 61px;
     display: flex;
 
+    @include media('<tablet') {
+        justify-content: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
     input[type="text"] {
         @include placeholder() {
             font-size: 18px;
@@ -15,6 +21,10 @@
         border-radius: 10px 0 0 10px;
         font-size: 18px;
         color: #666;
+
+        @include media('<tablet') {
+            min-width: 200px;
+        }
     }
 
     .submit-btn {
@@ -23,6 +33,10 @@
         border: none;
         width: 60px;
         border-radius: 0 10px 10px 0;
+
+        @include media('<tablet') {
+            width: 80px;
+        }
 
         &:before {
             content: '';
@@ -43,6 +57,7 @@
             color: $white;
             width: 80px;
             line-height: 1;
+
             &:before {
                 background-image: none;
             }

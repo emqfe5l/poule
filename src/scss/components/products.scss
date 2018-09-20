@@ -6,17 +6,31 @@
     h2 {
         font-family: 'campersans_regular';
         font-weight: normal;
+
+        @include media('<tablet') {
+            font-size: 62px;
+            line-height: 0.5;
+        }
     }
 
     &__body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media('<tablet') {
+            display: block;
+            margin: 0 -15px;
+        }
     }
 
     &__items-wrapper {
         display: flex;
         width: 100%;
+
+        @include media('<tablet') {
+            display: block;
+        }
     }
 
     &__item {
@@ -25,28 +39,79 @@
         min-height: 250px;
         color: $white;
 
+        @include media('<tablet') {
+            width: 100%;
+            min-height: 0;
+            text-align: center;
+        }
 
         &:nth-child(1) {
             background-image: url('../images/bulle-blue.svg');
 
+            @include media('<tablet') {
+                background-color: #005f85;
+                background-image: none;
+            }
+
+            .products__item-title {
+                &:before {
+                    background-image: url('../images/cuire.svg');
+                }
+            }
+
             .products__item-description {
                 color: #87bee8;
+
+                @include media('<tablet') {
+                    display: none;
+                }
             }
         }
 
         &:nth-child(2) {
             background-image: url('../images/bulle-yellow.svg');
 
+            @include media('<tablet') {
+                background-color: #fcc300;
+                background-image: none;
+            }
+
+            .products__item-title {
+                &:before {
+                    background-image: url('../images/rechauffer.svg');
+                }
+            }
+
             .products__item-description {
                 color: #b17400;
+
+                @include media('<tablet') {
+                    display: none;
+                }
             }
         }
 
         &:nth-child(3) {
             background-image: url('../images/bulle-purple.svg');
 
+            @include media('<tablet') {
+                background-color: #882973;
+                background-image: none;
+            }
+
+            .products__item-title {
+                &:before {
+                    background-image: url('../images/servir.svg');
+
+                }
+            }
+
             .products__item-description {
                 color: #ec6ea6;
+
+                @include media('<tablet') {
+                    display: none;
+                }
             }
         }
     }
@@ -59,11 +124,36 @@
         margin: 0 auto;
         line-height: .7;
         padding-top: 60px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @include media('<tablet') {
+            padding: 20px 0;
+            font-size: 29px;
+            max-width: none;
+            display: inline-block;
+        }
 
         .stroke-wrapper {
             font-family: $alt-font-1;
             font-size: 80px;
             display: block;
+
+            @include media('<tablet') {
+                display: inline;
+                font-size: 41px;
+            }
         }
     }
 
@@ -80,11 +170,25 @@
         justify-content: space-around;
         padding-top: 50px;
 
+        @include media('<tablet') {
+            flex-direction: column
+        }
+
         h3 {
             font-family: $alt-font-2;
             color: $orange;
             font-size: 32px;
             text-align: center;
+
+            @include media('<tablet') {
+                margin-bottom: 20px;
+            }
+        }
+
+        .single-input-form {
+            @include media('<tablet') {
+                margin-bottom: 45px;
+            }
         }
     }
 
@@ -92,6 +196,12 @@
         display: flex;
         flex-wrap: wrap;
         max-width: 400px;
+        justify-content: center;
+        align-items: center;
+
+        @include media('<tablet') {
+            max-width: none;
+        }
 
         a {
             @include animate(background-color);
@@ -106,8 +216,14 @@
             margin: 5px;
             background-color: $orange;
             display: inline-block;
+
             &:hover {
                 background-color: rgba($color: $orange, $alpha: .8);
+            }
+
+            @include media('<tablet') {
+                min-width: 120px;
+                width: calc(50% - 10px);
             }
         }
     }

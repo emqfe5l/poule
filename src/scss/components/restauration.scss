@@ -6,6 +6,11 @@
     background-position: 350px 0;
     padding-top: 20px;
 
+    @include media('<tablet') {
+        background-image: none;
+        padding-bottom: 30px;
+    }
+
     .container {
         position: relative;
     }
@@ -14,6 +19,17 @@
         position: absolute;
         left: 580px;
         top: 390px;
+
+        @include media('<tablet') {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            
+            img {
+                order: 1;
+                margin-top: -10px;
+            }
+        }
 
         .content-block {
             position: absolute;
@@ -25,6 +41,13 @@
             left: -100%;
             font-weight: 'museo';
             font-size: 16px;
+
+            @include media('<tablet') {
+                position: static;
+                width: auto;
+                padding: 20px 20px 10px;
+                margin: 0 15px;
+            }
         }
     }
 
@@ -33,6 +56,11 @@
         padding-left: 0px;
         position: absolute;
         left: 460px;
+
+        @include media('<tablet') {
+            position: static;
+
+        }
     }
 
     h2 {
@@ -41,6 +69,11 @@
         line-height: .6;
         font-weight: normal;
         text-align: left;
+        color: $dark-grey;
+
+        @include media('<tablet') {
+            text-align: center;
+        }
 
         .stroke-wrapper {
             &:nth-of-type(1) {
@@ -67,8 +100,18 @@
         border-radius: 5% 2px 5% 5%;
         overflow: hidden;
         box-shadow: 0 0 10px 0 #000;
+
         img {
             vertical-align: top;
+        }
+
+        @include media('<tablet') {
+            position: static;
+            max-width: none;
+            margin: 0 15px -1px;
+            border-radius: 5% 0 0 0;
+            box-shadow: none;
+
         }
     }
 }

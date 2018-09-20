@@ -1,12 +1,3 @@
-// Homepage sections
-
-@import 'hero-slider';
-@import 'products';
-@import 'restauration';
-@import 'stages';
-@import 'offers';
-
-
 // Global components
 
 @import 'section-headings';
@@ -15,3 +6,12 @@
 @import 'newsletter';
 @import 'social';
 @import 'dropdown-item';
+@import 'swiper-bullets';
+
+// Homepage sections
+
+@import 'hero-slider';
+@import 'products';
+@import 'restauration';
+@import 'stages';
+@import 'offers';

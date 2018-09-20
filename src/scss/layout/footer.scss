@@ -2,17 +2,35 @@
     background-color: $dark-grey;
     display: flex;
     align-items: center;
+    @include media('<tablet'){
+        padding-bottom: 15px;
+    }
 
     .container {
         width: 1260px;
         padding-left: 230px;
         position: relative;
+        @include media('<tablet'){
+            padding: 0;
+        }
     }
 
     .logo {
         position: absolute;
         bottom: 0;
         left: 75px;
+
+        @include media('<tablet') {
+            position: relative;
+            bottom: auto;
+            top: -40px;
+            max-width: 125px;
+            left: 50%;
+            transform: translate(-50%);
+            margin-bottom: -40px;
+            padding-bottom: 20px;
+        }
+
         img {
             vertical-align: top;
         }
@@ -22,28 +40,49 @@
         display: flex;
         justify-content: space-around;
         min-height: 107px;
+
+        @include media('<tablet') {
+            flex-direction: column;
+        }
     }
 
     &__nav {
         display: flex;
         align-items: center;
         margin-right: 10px;
-
+        @include media('<tablet'){
+            margin-right: 0;
+        }
         ul {
             @extend %listreset;
             display: flex;
             align-items: center;
+
+            @include media('<tablet') {
+                flex-direction: column;
+
+            }
         }
     }
-
+    &__nav-wrapper {
+        @include media('<tablet'){
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
     &__nav-item {
         margin: 0 10px;
+        @include media('<tablet'){
+        margin: 0;
+        padding: 10px;
+        }
 
         a {
             @include animate(color);
             color: $white;
             text-decoration: none;
             font-size: 12px;
+
             &:hover {
                 color: $orange;
             }
