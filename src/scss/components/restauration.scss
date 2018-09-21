@@ -5,7 +5,9 @@
     min-height: 690px;
     background-position: 350px 0;
     padding-top: 20px;
-
+    @include media('<1400px'){
+        background-position: 100px 0;
+    }
     @include media('<tablet') {
         background-image: none;
         padding-bottom: 30px;
@@ -19,6 +21,9 @@
         position: absolute;
         left: 580px;
         top: 390px;
+        @include media('<1400px'){
+            left: 340px;
+        }
 
         @include media('<tablet') {
             position: static;
@@ -37,7 +42,7 @@
             color: #fff;
             background-color: $orange;
             padding: 10px;
-            top: -130px;
+            top: -150px;
             left: -100%;
             font-weight: 'museo';
             font-size: 16px;
@@ -47,6 +52,7 @@
                 width: auto;
                 padding: 20px 20px 10px;
                 margin: 0 15px;
+                top: -130px;
             }
         }
     }
@@ -56,6 +62,9 @@
         padding-left: 0px;
         position: absolute;
         left: 460px;
+        @include media('<1400px'){
+           left: 240px;
+        }
 
         @include media('<tablet') {
             position: static;
@@ -103,6 +112,12 @@
 
         img {
             vertical-align: top;
+        }
+        @include media('<1400px'){
+            left: 580px;
+            max-width: 45%;
+            min-width: 150px;
+
         }
 
         @include media('<tablet') {

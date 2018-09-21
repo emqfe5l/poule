@@ -4,13 +4,17 @@
         background-color: #f74004;
         width: 100%;
         height: 100%;
-       
+
 
         img {
             margin-left: 100px;
             vertical-align: top;
 
-            @include media('<tablet') {
+            @include media('<1300px') {
+                margin-left: 0;
+            }
+
+            @include media('<desktop') {
                 max-width: 60%;
             }
 
@@ -20,7 +24,7 @@
             }
         }
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             min-height: 568px;
             display: flex;
             align-items: flex-end;
@@ -35,7 +39,8 @@
     .swiper-button-next {
         background-image: none;
         width: 60px;
-        @include media('<phone'){
+
+        @include media('<phone') {
             display: none;
         }
     }
@@ -43,11 +48,19 @@
     .swiper-button-prev {
         position: absolute;
         left: 10%;
-        
+
+        @include media('<1300px') {
+            left: 30px;
+        }
+
     }
 
     .swiper-button-next {
         right: 10%;
+
+        @include media('<1300px') {
+            right: 30px;
+        }
     }
 
     .swiper-pagination {
@@ -61,7 +74,7 @@
         width: 450px;
         height: 350px;
         top: 30px;
-        right: 30%;
+        left: 45%;
         font-family: 'grandhotel_regular';
         background-image: url('../images/bulles.svg');
         background-size: 100% 100%;
@@ -71,18 +84,31 @@
         text-align: center;
         line-height: 1;
 
+        @include media('<1300px') {
+            top: 30px;
+            left: 40%;
+        }
+
+        @include media('<desktop') {
+            width: 310px;
+            height: 390px;
+            top: 30px;
+            left: 45%;
+            transform: translateX(-50%);
+            font-size: 46px;
+            padding-left: 19px;
+            padding-top: 60px;
+            background-image: url('../images/bulle-mobile.svg');
+        }
+
         @include media('<tablet') {
-            width: 360px;
-            height: 280px;
             font-size: 50px;
             top: -30px;
             padding: 0;
-            right: auto;
             left: 50%;
             transform: translateX(-50%);
             padding-top: 50px;
-            padding-left: 70px;
-
+            padding-left: 13px;
         }
 
         p {
@@ -102,9 +128,10 @@
                 text-transform: capitalize;
                 font-size: 77px;
 
-                @include media('<tablet') {
+                @include media('<1300px') {
                     font-size: 57px;
                 }
+
             }
 
             &:nth-of-type(2) {
@@ -113,7 +140,7 @@
                 font-family: 'campersans_regular';
                 color: $orange;
 
-                @include media('<tablet') {
+                @include media('<1300px') {
                     font-size: 82px;
                 }
             }
@@ -123,7 +150,7 @@
                 font-size: 81px;
                 color: $orange;
 
-                @include media('<tablet') {
+                @include media('<1300px') {
                     font-size: 57px;
                 }
             }

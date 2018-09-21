@@ -28,6 +28,11 @@
         display: flex;
         width: 100%;
 
+        @include media('<900px') {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         @include media('<tablet') {
             display: block;
         }
@@ -39,10 +44,17 @@
         min-height: 250px;
         color: $white;
 
+        @include media('<900px') {
+            width: 50%;
+            margin-bottom: 25px;
+        }
+
         @include media('<tablet') {
             width: 100%;
+            margin: 0;
             min-height: 0;
             text-align: center;
+            width: 100%;
         }
 
         &:nth-child(1) {
@@ -56,6 +68,10 @@
             .products__item-title {
                 &:before {
                     background-image: url('../images/cuire.svg');
+                    left: -20px;
+                    @include media('<tablet'){
+                        left: -70px;
+                    }
                 }
             }
 
@@ -71,6 +87,10 @@
         &:nth-child(2) {
             background-image: url('../images/bulle-yellow.svg');
 
+            @include media('<900px') {
+                order: 1
+            }
+
             @include media('<tablet') {
                 background-color: #fcc300;
                 background-image: none;
@@ -79,6 +99,10 @@
             .products__item-title {
                 &:before {
                     background-image: url('../images/rechauffer.svg');
+                    left: -50px;
+                    @include media('<tablet'){
+                        left: -60px;
+                    }
                 }
             }
 
@@ -102,7 +126,10 @@
             .products__item-title {
                 &:before {
                     background-image: url('../images/servir.svg');
-
+                    left: -20px;
+                    @include media('<tablet'){
+                        left: -70px;
+                    }
                 }
             }
 
@@ -135,7 +162,12 @@
             background-repeat: no-repeat;
             left: -60px;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(25%);
+
+            @include media('<tablet') {
+                transform: translateY(0);
+                top: 10px;
+            }
         }
 
         @include media('<tablet') {
@@ -163,6 +195,10 @@
         text-align: center;
         max-width: 300px;
         margin: 0 auto;
+
+        @include media('<1300px') {
+            max-width: 220px;
+        }
     }
 
     .section__links {
