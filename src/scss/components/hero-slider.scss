@@ -31,6 +31,17 @@
         }
     }
 
+    &__content-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     .swiper-container {
         padding-bottom: 30px;
     }

@@ -5,6 +5,7 @@
 
     @include media('<tablet'){
         justify-content: center;
+    margin: 0;
     }
 
     &__item {
