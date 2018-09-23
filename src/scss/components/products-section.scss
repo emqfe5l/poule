@@ -1,18 +1,120 @@
 .products-section {
     background: linear-gradient(to bottom, rgba(254, 247, 240, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    padding: 15px 0 0 0;
+    padding: 12px 0 0 0;
     .has-decoration {
         position: relative;
         &:after {
-          content: '';
-          background-image: url('../images/foot-print-bg.svg');
+            content: '';
+            background-image: url('../images/bg-foot-print.svg');
             position: absolute;
-            top: 0;
-            left: 0;
+          height: 137px;
+            top: -38px;
+            z-index: 1;
             right: 0;
-            bottom: 0
+            width: 986px;
+        }
+    }
+    .back-link {
+        color: $orange;
+        font-size: 32px;
+        padding-left: 50px;
+        margin-bottom: 10px;
+        position: relative;
+        text-decoration: none;
+        font-family: $alt-font-2;
+        margin-bottom: 20px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../images/arrow-left.svg');
+            width: 47px;
+            height: 26px;
+            background-size: 100% 100%;
         }
     }
 }
 
-.presintation-row {}
+.presintation-row {
+    padding: 19px 0 0 40px;
+    display: flex;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    .text-holder {
+        padding: 31px 5px 31px 23px;
+    }
+    img {
+        width: 100%;
+    }
+    .box-logo-holder {
+        width: 300px;
+        flex-shrink: 0;
+    }
+    .logo-holder2 {
+        width: 140px;
+        flex-shrink: 0;
+        margin:11px 22px;
+    }
+    .logo-holder3 {
+        width: 118px;
+        margin: 24px 10px;
+        flex-shrink: 0;
+    }
+}
+
+.products-wrapper {
+    .h3 {
+        padding: 5px 58px 0px 50px;
+        font-weight: 400;
+        margin-bottom: 28px;
+        text-transform: uppercase;
+        font-size: 68px;
+        background-color: $orange;
+        color: $white;
+        font-family: $alt-font-1;
+        border-radius: 0 0 30px 0;
+        display: inline-block;
+        line-height: 0.7;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 5;
+    position: relative;
+    &:after{
+      content: '';
+      width:31%;
+
+    }
+    .product-box {
+      width: 32.2%;
+      color: #e54e1e;
+      font-size: 32px;
+      margin-bottom: 45px;
+      text-align: center;
+        .title {
+            font-family: $alt-font-2;
+            font-weight: 400;
+        }
+        .img-holder {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, .2);
+            border-radius: 30px 0 30px 30px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: $white;
+            img {
+                vertical-align: top;
+                height: 238px;
+                width:auto;
+            }
+        }
+    }
+}
