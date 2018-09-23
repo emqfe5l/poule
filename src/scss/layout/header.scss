@@ -9,7 +9,7 @@
         min-width: 180px;
 
         @include media('<tablet') {
-            min-height: 75px;
+            min-height: 60px;
         }
 
         .hamburger-wrapper {
