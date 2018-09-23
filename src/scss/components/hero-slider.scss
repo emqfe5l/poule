@@ -43,9 +43,12 @@
     }
 
     .swiper-container {
-        padding-bottom: 30px;
-    }
+        padding-bottom: 45px;
 
+    }
+    .swiper-slide {
+        box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.8);
+    }
     .swiper-button-prev,
     .swiper-button-next {
         background-image: none;
