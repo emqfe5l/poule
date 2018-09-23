@@ -9,6 +9,11 @@
     color: $white;
     z-index: 10;
 
+    @include media('<tablet') {
+        padding: 10px 40px;
+
+    }
+
     .icon {
         position: absolute;
         top: 50%;
@@ -25,6 +30,7 @@
 
     &:hover {
         color: $orange;
+
         svg {
             fill: $orange;
         }

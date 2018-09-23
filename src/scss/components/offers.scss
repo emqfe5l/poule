@@ -1,24 +1,55 @@
 .offers {
     padding-top: 30px;
     padding-bottom: 30px;
+    position: relative;
+
+    @include media('<tablet') {
+        padding-bottom: 50px;
+    }
+
     h2 {
         color: $dark-grey;
+
+        @include media('<tablet') {
+            line-height: .6;
+        }
     }
-    &__wrapper {
-        display: flex;
-        margin: 0 -10px;
+
+    .offers-container {
+        overflow: hidden;
+    }
+
+    .swiper-pagination {
+        bottom: 10px;
+        display: none;
+
+        @include media('<tablet') {
+            display: block;
+        }
     }
 
     &__item {
         margin: 10px;
         flex: 1;
+
+        @include media('<tablet') {
+            margin: 0;
+            flex: 1 0 auto;
+
+        }
     }
+
     &__img-holder {
         overflow: hidden;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
         border-radius: 25px 0 25px 25px;
         height: 179px;
         margin-bottom: 33px;
+
+        @include media('<tablet') {
+            box-shadow: none;
+        }
+
         img {
             vertical-align: top;
             height: 100%;

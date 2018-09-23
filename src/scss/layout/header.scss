@@ -1,7 +1,31 @@
+
+.footer {
+    display: none;
+}
+
 .header {
     &__logo-wrapper {
         position: relative;
         min-width: 180px;
+
+        @include media('<tablet') {
+            min-height: 75px;
+        }
+
+        .hamburger-wrapper {
+            display: none;
+
+            @include media('<tablet') {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+            }
+
+            .hamburger {
+                color: $white;
+            }
+        }
     }
 
     &__top-line {
@@ -11,12 +35,20 @@
             display: flex;
             position: relative;
             justify-content: space-between;
+
+            @include media('<tablet') {
+                flex-direction: column;
+            }
         }
 
         .logo {
             position: absolute;
-            z-index: 2;
-            
+            z-index: 20;
+
+            @include media('<tablet') {
+                width: 90px;
+            }
+
             img {
                 vertical-align: top;
             }
@@ -40,6 +72,15 @@
                 top: 0;
                 left: 0;
             }
+
+            @include media('<tablet') {
+                height: 35px;
+                width: 35px;
+                background-color: transparent;
+                position: absolute;
+                right: 15px;
+                top: 0;
+            }
         }
     }
 
@@ -48,6 +89,25 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @include media('<tablet') {
+            @include animate(opacity);
+            display: block;
+            position: absolute;
+            background-color: $dark-grey;
+            width: auto;
+            right: 0;
+            left: 0;
+            margin: -1px -15px 0;
+            z-index: 15;
+            top: 100%;
+            opacity: 0;
+            padding: 0 15px;
+            &.is-active {
+                opacity: 1;
+            }
+        }
+
 
     }
 
@@ -58,15 +118,36 @@
         position: relative;
         z-index: 1;
 
+        @include media('<tablet') {
+            @include animate(opacity);
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            background-color: $white;
+            z-index: 10;
+            transform: translateY(75px);
+            &.is-active {
+                opacity: 1;
+            }
+        }
+
     }
 
     .main-nav {
         padding-left: 230px;
 
+        @include media('<tablet') {
+            padding-left: 0;
+        }
+
         ul {
             @extend %listreset;
             display: flex;
             justify-content: flex-end;
+
+            @include media('<tablet') {
+                flex-direction: column;
+            }
         }
 
         li {

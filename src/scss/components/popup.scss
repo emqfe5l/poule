@@ -1,0 +1,152 @@
+//class to add on wrapper when popup is activated
+
+.popup-active {
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: $black, $alpha: .5);
+        position: fixed;
+        z-index: 50;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 55;
+    background-color: rgba($color: $white, $alpha: .7);
+    padding: 10px;
+    border-radius: 25px 0 25px 25px;
+    display: none;
+
+    @include media('<tablet') {
+        overflow: scroll;
+    }
+
+    // display: none;
+    .section-headings {
+        color: $dark-grey;
+        max-width: 750px;
+        margin: 0 auto 20px;
+        position: relative;
+
+        h2 {
+            @include media('<tablet') {
+                font-size: 50px;
+            }
+        }
+
+        &__introduction {
+            @include media('<tablet') {
+                font-size: 12px;
+            }
+        }
+
+        @include media('<widescreen') {
+            max-width: 650px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            left: 0;
+            transform: translateX(-90%);
+            background-image: url('../images/poule-thumb.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include media('<widescreen') {
+                transform: translateX(-70%);
+            }
+
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+
+    }
+
+    .container {
+        width: 1260px;
+
+        @include media('<widescreen') {
+            width: auto;
+            min-width: 800px;
+        }
+
+        @include media('<tablet') {
+            min-width: 0;
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+
+        @include media('<tablet') {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white;
+        padding: 60px 10px 20px;
+        margin: 10px;
+        border-radius: 25px 0 25px 25px;
+
+        @include media('<tablet') {
+            height: 190px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        &:nth-child(2n) {
+            background-color: $orange;
+
+            .popup__item-title {
+                color: $white;
+
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+
+            @include media('<tablet') {
+                max-width: 40%;
+            }
+        }
+
+        &-title {
+            color: $orange;
+            text-transform: uppercase;
+            font-family: $alt-font-1;
+            font-size: 44px;
+            line-height: 0.6;
+            text-align: center;
+
+            @include media('<tablet') {
+
+                margin-bottom: 0;
+
+            }
+        }
+    }
+}

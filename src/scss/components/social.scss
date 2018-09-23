@@ -3,6 +3,11 @@
     align-items: center;
     margin: 0 -5px;
 
+    @include media('<tablet'){
+        justify-content: center;
+    margin: 0;
+    }
+
     &__item {
         margin: 5px;
 

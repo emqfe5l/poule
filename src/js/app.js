@@ -4,6 +4,8 @@
 // Feel free with using ES6 here.
 
 import heroSwiper from './modules/heroSwiper';
+import offersSwiper from './modules/offersSwiper';
+import hamburger from './modules/hamburger';
 
 ( ($) => {
   'use strict';
@@ -11,6 +13,8 @@ import heroSwiper from './modules/heroSwiper';
   // When DOM is ready
   $(() => {
     heroSwiper.init();
+    offersSwiper.init();
+    hamburger.init();
   });
 
 })(jQuery);

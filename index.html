@@ -21,6 +21,13 @@
                                     <img src="assets/images/logo.png" alt="poule toque">
                                 </a>
                             </div>
+                            <div class="hamburger-wrapper">
+                                <button class="hamburger hamburger--collapse" type="button">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                         <div class="header__dropdown-wrapper">
 
@@ -78,9 +85,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="hero-slider__content">
+                            <div class="hero-slider__content hero-slider__content-2">
                                 <div class="container">
-                                    <img src="assets/images/banner-1.jpg" alt="">
+                                    <img src="assets/images/slide-2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -215,31 +222,37 @@
                     <div class="section-headings">
                         <h2>Poule et toque vous suggère…</h2>
                     </div>
-                    <div class="offers__wrapper">
-                        <div class="offers__item">
-                            <div class="offers__img-holder"><img src="assets/images/offer-1.jpg" alt=""></div>
-                            <div class="offers__title-holder">
-                                <h3>Cordon bleu l'Authentique</h3>
+                    <div class="offers-container">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="offers__item swiper-slide">
+                                <div class="offers__img-holder"><img src="assets/images/offer-1.jpg" alt=""></div>
+                                <div class="offers__title-holder">
+                                    <h3>Cordon bleu l'Authentique</h3>
+                                </div>
+                            </div>
+                            <div class="offers__item swiper-slide">
+                                <div class="offers__img-holder"><img src="assets/images/offer-2.jpg" alt=""></div>
+                                <div class="offers__title-holder">
+                                    <h3>Cuisse confite</h3>
+                                </div>
+                            </div>
+                            <div class="offers__item swiper-slide">
+                                <div class="offers__img-holder"><img src="assets/images/offer-3.jpg" alt=""></div>
+                                <div class="offers__title-holder">
+                                    <h3>Sot l'y laisse de dinde</h3>
+                                </div>
+                            </div>
+                            <div class="offers__item swiper-slide">
+                                <div class="offers__img-holder"><img src="assets/images/offer-4.jpg" alt=""></div>
+                                <div class="offers__title-holder">
+                                    <h3>Tournedos de canard</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="offers__item">
-                            <div class="offers__img-holder"><img src="assets/images/offer-2.jpg" alt=""></div>
-                            <div class="offers__title-holder">
-                                <h3>Cuisse confite</h3>
-                            </div>
-                        </div>
-                        <div class="offers__item">
-                            <div class="offers__img-holder"><img src="assets/images/offer-3.jpg" alt=""></div>
-                            <div class="offers__title-holder">
-                                <h3>Sot l'y laisse de dinde</h3>
-                            </div>
-                        </div>
-                        <div class="offers__item">
-                            <div class="offers__img-holder"><img src="assets/images/offer-4.jpg" alt=""></div>
-                            <div class="offers__title-holder">
-                                <h3>Tournedos de canard</h3>
-                            </div>
-                        </div>
+
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -297,6 +310,33 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="popup">
+        <div class="container">
+            <div class="popup__wrapper">
+                <div class="section-headings">
+                    <h2>QUELLE EST VOTRE ACTIVITÉ ?</h2>
+                    <div class="section-headings__introduction">
+                        Poule et Toque propose une large gamme de solutions volailles pour toutes les restaurations.
+                        Cliquez sur votre activité ci-dessous pour découvrir nos produits adaptés à votre métier.
+                    </div>
+                </div>
+                <div class="popup__body">
+                    <a class="popup__item">
+                        <img src="assets/images/popup-1.svg" alt="">
+                        <p class="popup__item-title">Restauration collective</p>
+                    </a>
+                    <a class="popup__item">
+                        <img src="assets/images/popup-2.svg" alt="">
+                        <p class="popup__item-title">Restauration COMMERCIALE</p>
+                    </a>
+                    <a class="popup__item">
+                        <img src="assets/images/popup-3.svg" alt="">
+                        <p class="popup__item-title">SNACKING</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/js/vendor.min.js" defer></script>
     <script src="assets/js/app.js" defer></script>
