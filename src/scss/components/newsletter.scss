@@ -1,12 +1,16 @@
 .newsletter {
     background-color: $orange;
-    padding: 25px 0 55px;
+    padding: 19px 0;
+    @include media('<tablet'){
+        padding: 19px 0 46px;
+    }
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
-        @include media('<tablet'){
+
+        @include media('<tablet') {
             flex-direction: column;
         }
     }
@@ -15,15 +19,18 @@
         p {
             margin-bottom: 0;
         }
+
         color: $white;
         font-family: $alt-font-2;
         font-size: 25px;
         line-height: .9;
         margin-right: 25px;
         margin-bottom: 0;
-        @include media('<tablet'){
+
+        @include media('<tablet') {
             margin-bottom: 20px;
         }
+
         .stroke-wrapper {
             font-family: $alt-font-1;
             font-size: 63px;

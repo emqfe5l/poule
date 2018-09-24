@@ -1,5 +1,5 @@
 .btn {
-    @include animate(background-color);
+    @include animate(background-color color);
     font-family: 'campersans_regular';
     font-size: 36px;
     height: 40px;
@@ -10,7 +10,8 @@
     color: $white;
 
     &:hover {
-        background-color: rgba($color: $dark-grey, $alpha: .8)
+       color: $dark-grey;
+       background-color: $white;
     }
 
     &--accent {

@@ -1,17 +1,22 @@
 .offers {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 30px;
     position: relative;
 
     @include media('<tablet') {
         padding-bottom: 50px;
+        margin-bottom: 30px;
     }
-
+    .section-headings {
+        margin-bottom: 5px;
+    }
     h2 {
         color: $dark-grey;
 
         @include media('<tablet') {
             line-height: .6;
+            font-size: 62px;
+            margin-bottom: 20px;
         }
     }
 
@@ -37,6 +42,25 @@
             flex: 1 0 auto;
 
         }
+
+        &-overlay {
+            @include animate(opacity);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            background-color: rgba($black, .7);
+            color: $white;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
     &__img-holder {
@@ -44,7 +68,8 @@
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
         border-radius: 25px 0 25px 25px;
         height: 179px;
-        margin-bottom: 33px;
+        margin-bottom: 13px;
+        position: relative;
 
         @include media('<tablet') {
             box-shadow: none;

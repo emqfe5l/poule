@@ -1,12 +1,12 @@
-
 .footer {
     display: none;
 }
 
 .header {
+
     &__logo-wrapper {
         position: relative;
-        min-width: 180px;
+        min-width: 210px;
 
         @include media('<tablet') {
             min-height: 60px;
@@ -35,9 +35,11 @@
             display: flex;
             position: relative;
             justify-content: space-between;
+            padding: 0 50px;
 
             @include media('<tablet') {
                 flex-direction: column;
+                padding: 0;
             }
         }
 
@@ -103,6 +105,7 @@
             top: 100%;
             opacity: 0;
             padding: 0 15px;
+
             &.is-active {
                 opacity: 1;
             }
@@ -116,7 +119,7 @@
         padding: 5px 0 5px 0;
         box-shadow: 0 7px 15px 2px rgba(black, 0.3);
         position: relative;
-        z-index: 1;
+        z-index: 3;
 
         @include media('<tablet') {
             @include animate(opacity);
@@ -126,6 +129,7 @@
             background-color: $white;
             z-index: 10;
             transform: translateY(75px);
+
             &.is-active {
                 opacity: 1;
             }
@@ -134,10 +138,10 @@
     }
 
     .main-nav {
-        padding-left: 230px;
+        padding: 0 53px 0 250px;
 
         @include media('<tablet') {
-            padding-left: 0;
+            padding: 0;
         }
 
         ul {
@@ -151,7 +155,14 @@
         }
 
         li {
-            padding-right: 20px;
+            padding-right: 40px;
+            position: relative;
+
+            @include media('<desktop') {
+                padding-right: 15px;
+            }
+
+            ;
 
             &:last-child {
                 padding-right: 0;
@@ -166,6 +177,15 @@
                 font-family: 'campersans_regular';
                 font-size: 40px;
                 color: $dark-grey;
+
+                @include media('<desktop') {
+                    font-size: 35px;
+                }
+
+                @include media('<phone') {
+                    font-size: 40px;
+                }
+
 
                 &::before {
                     @include animate(opacity);
@@ -189,4 +209,95 @@
             }
         }
     }
+}
+
+.inner-nav {
+    @include animate(opacity);
+    position: absolute;
+    z-index: 200;
+    flex-direction: column;
+    width: 260px;
+    transform: translate(-25%, 7px);
+    top: 100%;
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+
+    @include media('<tablet') {
+        width: auto;
+        left: 0;
+        right: 0;
+        transform: translate(0, 0);
+        margin: 0 -15px !important;
+    }
+
+
+    &.is-active {
+        opacity: 1;
+    }
+
+
+    li.inner-nav__item {
+        text-align: center;
+        padding-right: 0;
+
+        a {
+            color: $white;
+            display: inline-block;
+            font-family: $alt-font-2;
+            text-transform: none;
+            font-size: 29px;
+            margin-left: 50px;
+            padding: 10px 0;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 60px;
+                height: 50px;
+                left: 0;
+                transform: translate(-100%);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                display: block;
+                opacity: 1;
+            }
+
+            .stroke-wrapper {
+                font-family: $alt-font-1;
+                text-transform: uppercase;
+                font-size: 41px;
+            }
+        }
+
+        &:nth-child(1) {
+            background-color: #005f85;
+
+            a::before {
+                background-image: url('../images/cuire.svg');
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #fcc300;
+
+            a::before {
+                background-image: url('../images/rechauffer.svg');
+            }
+        }
+
+        &:nth-child(3) {
+            background-color: #882973;
+
+            a::before {
+                background-image: url('../images/servir.svg');
+            }
+        }
+
+        &:last-child {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
 }
