@@ -189,6 +189,12 @@
     .btn-holder {
         display: flex;
         justify-content: center;
+        .btn {
+            &:hover {
+                background-color: rgba($orange, .8);
+                color: $white;
+            }
+        }
 
     }
 
