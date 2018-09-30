@@ -5,6 +5,10 @@
   font-size: 40px;
   text-shadow: 2px 1px 1px $orange;
   border-top:2px solid #b9b1aa;
+  @include media('<tablet') {
+ padding:65px 0;
+   line-height: .6;
+  }
   strong{
     font-weight: 400;
     display: block;
@@ -15,6 +19,9 @@
     font-size: 102px;
     font-family: $alt-font-1;
     line-height: .5;
+    @include media('<tablet') {
+      font-size: 82px;
+    }
   }
   &-bg-blue{
     background-color: #005f85;

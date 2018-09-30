@@ -1,17 +1,20 @@
 .products-section {
     background: linear-gradient(to bottom, rgba(254, 247, 240, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    padding: 12px 0 0 0;
+    padding: 5px 0 0 0;
     .has-decoration {
         position: relative;
         &:after {
             content: '';
             background-image: url('../images/bg-foot-print.svg');
             position: absolute;
-          height: 137px;
+            height: 137px;
             top: -38px;
             z-index: 1;
-            right: 0;
+            left: 100%;
             width: 986px;
+            @include media('<tablet') {
+                display: none;
+            }
         }
     }
     .back-link {
@@ -22,7 +25,12 @@
         position: relative;
         text-decoration: none;
         font-family: $alt-font-2;
-        margin-bottom: 20px;
+        margin-bottom: 27px;
+        display: inline-block;
+        @include media('<phone') {
+            margin-top: -10px;
+            margin-bottom: 11px;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -33,6 +41,9 @@
             width: 47px;
             height: 26px;
             background-size: 100% 100%;
+            @include media('<widescreen') {
+                right: -55px;
+            }
         }
     }
 }
@@ -43,8 +54,27 @@
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 5px;
+    @include media('<desktop') {
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+    @include media('<tablet') {
+     padding-bottom: 9px;
+    }
     .text-holder {
         padding: 31px 5px 31px 23px;
+        @include media('<desktop') {
+            padding-bottom: 10px;
+        }
+        @include media('<tablet') {
+            padding: 9px 0 0 0;
+        }
+        p{
+            @include media('<tablet') {
+                margin-bottom: 0;
+            }
+        }
     }
     img {
         width: 100%;
@@ -56,16 +86,23 @@
     .logo-holder2 {
         width: 140px;
         flex-shrink: 0;
-        margin:11px 22px;
+        margin: 11px 22px;
+        @include media('<tablet') {
+            margin:3px;
+        }
     }
     .logo-holder3 {
         width: 118px;
         margin: 24px 10px;
         flex-shrink: 0;
+        @include media('<tablet') {
+            margin:12px;
+        }
     }
 }
 
 .products-wrapper {
+    
     .h3 {
         padding: 5px 58px 0px 50px;
         font-weight: 400;
@@ -80,6 +117,12 @@
         line-height: 0.7;
         position: relative;
         z-index: 2;
+        @include media('<tablet') {
+            font-size: 52px;
+            padding: 5px 20px 0;
+            font-weight: 300;
+            margin-bottom: 13px; 
+        }
     }
 }
 
@@ -89,17 +132,73 @@
     justify-content: space-between;
     z-index: 5;
     position: relative;
-    &:after{
-      content: '';
-      width:31%;
-
+    &:after {
+        content: '';
+        width: 31%;
     }
     .product-box {
-      width: 32.2%;
-      color: #e54e1e;
-      font-size: 32px;
-      margin-bottom: 45px;
-      text-align: center;
+        width: 32.2%;
+        color: #e54e1e;
+        font-size: 32px;
+        margin-bottom: 45px;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        @include media('<tablet') {
+            width: 48%;
+            margin-bottom: 35px;
+        }
+        @include media('<phone') {
+            width: 100%;
+        }
+        &:hover .overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(#eb5322, .4);
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            font-family: $alt-font-2;
+            font-size: 32px;
+            @include animate(opacity visibility);
+            .overlay-icon {
+                width: 70px;
+                height: 70px;
+                border-radius: 14px 0 14px 14px;
+                border: 3px solid $white;
+                margin-bottom: 10px;
+                position: relative;
+                &:after,
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 30px;
+                    height: 3px;
+                    background-color: $white;
+                    transform: translate(-50%, -50%);
+                }
+                &:before {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    transform-origin: 50% 50%;
+                }
+            }
+            strong {
+                font-weight: 400;
+            }
+        }
         .title {
             font-family: $alt-font-2;
             font-weight: 400;
@@ -110,10 +209,18 @@
             overflow: hidden;
             margin-bottom: 15px;
             background-color: $white;
+            position: relative;
             img {
                 vertical-align: top;
                 height: 238px;
-                width:auto;
+                width: auto;
+                object-fit: contain;
+                @include media('<tablet') {
+                 height: 200px;
+                }
+                @include media('<phone') {
+                 height: 176px;
+                }
             }
         }
     }

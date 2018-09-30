@@ -4,12 +4,22 @@
     padding: 18px 0 19px;
     @extend %listreset;
     font-size: 12px;
+    background-color: $white;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: -9999px;
+        right: -9999px;
+        background-color: $white;
+        top: 0;
+        bottom: 0;
+    }
     li {
         position: relative;
         padding-left: 10px;
         color: $dark-grey;
         margin-right: 4px;
-        
         &:before {
             content: '';
             position: absolute;
@@ -23,13 +33,16 @@
         }
         &:first-child {
             padding-left: 0;
-            &:before{
-              display: none;
+            &:before {
+                display: none;
             }
         }
         a {
             color: inherit;
             text-decoration: none;
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }

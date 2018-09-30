@@ -18,7 +18,7 @@
                         <div class="header__logo-wrapper">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="assets/images/logo.png" alt="poule toque">
+                                    <img src="assets/images/Logo.svg" alt="poule toque">
                                 </a>
                             </div>
                             <div class="hamburger-wrapper">
@@ -30,6 +30,7 @@
                             </div>
                         </div>
                         <div class="header__dropdown-wrapper">
+
                             <button class="dropdown-item">Restauration Commerciale <i class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21">
                                         <path d="M.327 14.315L0 21l4-.707L3.344 14l-3.017.315zM4.495 14.377s1.338-.423 1.69-.636c.352-.211.985-.283.985-.283h4.785c.774 0 .705.424.705.424 0 .636-.986.636-.986.636s-1.689.142-2.322.283c-.633.142-.352.919-.352.919h4.432s.846-.212 1.55-.777c.703-.566 2.391-1.768 2.814-1.202.423.567-.141 1.202-.141 1.202s-3.8 2.757-4.363 3.111c-.563.353-1.406.424-1.406.424H7.24c-.563 0-2.323.496-2.323.496l-.422-4.597M21.221 10.252H3.159s-.329-7.01 7.071-7.99a1.893 1.893 0 0 1-.034-.33c0-1.054.85-1.908 1.9-1.908 1.049 0 1.901.854 1.901 1.908 0 .119-.015.237-.036.35 7.303 1.046 7.26 7.97 7.26 7.97zM9.756 5.61s-2.219.527-2.843 2.717c.642-.981 1.045-1.806 2.843-2.717zm.025-1.067s-3.303.782-4.232 4.041c.955-1.459 1.556-2.685 4.232-4.041zM3.856 9.249c1.414-2.162 2.305-3.978 6.266-5.985 0 0-4.893 1.158-6.266 5.985zm8.24-8.492a1.173 1.173 0 0 0-1.142 1.431 14.63 14.63 0 0 1 1.072-.043c.423 0 .822.023 1.208.055A1.173 1.173 0 0 0 12.096.757z" />
@@ -37,6 +38,8 @@
                                         <path d="M22.569 11.855a.871.871 0 0 0-.87-.873H2.517a.87.87 0 0 0-.868.873.87.87 0 0 0 .868.873h19.182c.48 0 .87-.39.87-.873" />
                                     </svg>
                                 </i></button>
+
+
                             <button class="dropdown-item">Se connecter <i class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                                         <path d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-4 9h1V9a3 3 0 0 1 6 0v2h1v6H8v-6zm6 0V9c0-1.104-.897-2-2-2s-2 .896-2 2v2h4z" />
@@ -53,7 +56,25 @@
                         <nav class="main-nav">
                             <ul>
                                 <li><a href="#">Poule et toque</a></li>
-                                <li><a href="#">Nos produits</a></li>
+                                <li><a class="has-inner-menu" href="#">Nos produits</a>
+                                    <ul class="inner-nav">
+                                        <li class="inner-nav__item">
+                                            <a href="#">
+                                                <span>Pret a <span class="stroke-wrapper">cuire</span></span>
+                                            </a>
+                                        </li>
+                                        <li class="inner-nav__item">
+                                            <a href="#">
+                                                <span>Pret a <span class="stroke-wrapper">réchauffer</span></span>
+                                            </a>
+                                        </li>
+                                        <li class="inner-nav__item">
+                                            <a href="#" class="">
+                                                <span class="">Pret a <span class="stroke-wrapper">Servir</span></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Quoi de n’oeuf ?</a></li>
                                 <li><a href="#">Nous contacter</a></li>
                             </ul>
@@ -70,7 +91,7 @@
                     <h1 class="h1">POULET XL <img src="assets/images/drop.svg" alt="drop"></h1>
                 </div>
             </div>
-            <div class="container">
+            <div class="container container-white">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Accueil</a></li>
                     <li class="breadcrumb-item"><a href="#">Prêt à cuire</a></li>
@@ -79,7 +100,6 @@
             </div>
             <section class="products-section">
                 <div class="container">
-                    <a href="#" class="back-link">Retour vers Prêt à cuire</a>
                     <div class="presintation-row">
                         <div class="box-logo-holder">
                             <img src="assets/images/poule-box.png" alt="Poule" />
@@ -97,64 +117,107 @@
                             <img src="assets/images/garantie.png" alt="volaille-france" />
                         </div>
                     </div>
-                    <div class="products-wrapper has-decoration">
-                        <h3 class="h3">LES Découpes</h3>
+                    <div class="products-wrapper ">
+                        <h3 class="h3 has-decoration">LES Découpes</h3>
                         <div class="products-grid">
-                            <div class="product-box">
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product1.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Cuisse de poulet</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product2.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Quart arrière de poulet</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product3.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Aile de poulet 3 phalanges</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product4.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Pilon de poulet</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product5.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Filet de poulet</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product6.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Aiguillette de poulet</strong>
-                            </div>
+
+                            </a>
                         </div>
                     </div>
                     <div class="products-wrapper">
                         <h3 class="h3">LES Pièces entières</h3>
                         <div class="products-grid">
-                            <div class="product-box">
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product7.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Sot l’y laisse de poulet</strong>
-                            </div>
-                            <div class="product-box">
+
+                            </a>
+                            <a href="#" class="product-box">
                                 <div class="img-holder">
                                     <img src="assets/images/product8.jpg" alt="product image">
+                                    <div class="overlay">
+                                        <span class="overlay-icon"></span>
+                                        <strong class="overlay-text">Découvrir le produit</strong>
+                                    </div>
                                 </div>
                                 <strong class="title">Sauté de poulet</strong>
-                            </div>
+
+                            </a>
 
                         </div>
+                    </div>
+                    <div class="link-wrapper">
+                        <a href="#" class="back-link">Retour vers Prêt à cuire</a>
                     </div>
                 </div>
             </section>
@@ -177,7 +240,7 @@
                 <div class="footer__wrapper">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo.png" alt="poule toque">
+                            <img src="assets/images/Logo.svg" alt="poule toque">
                         </a>
                     </div>
                     <div class="footer__nav">

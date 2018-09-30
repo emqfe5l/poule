@@ -3,37 +3,83 @@
     padding: 83px 15px 81px;
     text-align: center;
     color: $white;
-    margin-top: -17px;
+    margin-top: 0;
     position: relative;
-    &:before{
-      position: absolute;
-      
-      right:15%;
-      content: '';
-      background-image: url('../images/bg-foot-print2.svg');
-      width:93px;
-      height: 485px;
-      background-size: 100% 100%;
-      background-position: 50% 100%;
-      top: 0;
-      transform: translateY(-100%);
+    background-position: 50% 50%;
+    @include media('<tablet') {
+        padding-top: 59px;
+    }
+    .container {
+        position: relative;
+        &:before {
+            position: absolute;
+            right: -30px;
+            content: '';
+            background-image: url('../images/bg-foot-print2.svg');
+            width: 116px;
+            height: 540px;
+            background-size: 100% 100%;
+            background-position: 50% 100%;
+            top: -100px;
+            transform: translateY(-100%);
+            @include media('<desktop') {
+                display: none;
+            }
+        }
     }
     .h3 {
         font-size: 82px;
         margin-bottom: 0;
         line-height: 1;
+        @include media('<tablet') {
+            font-size: 62px;
+            line-height: 0.6;
+            margin-bottom: 12px;
+        }
     }
     .content-holder {
         max-width: 460px;
         margin: 0 auto;
         position: relative;
+        @include media('<desktop') {
+            margin: 0;
+        }
+        @include media('<tablet') {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .poule-image {
             width: 400px;
-            
             position: absolute;
             top: 50%;
-            left: calc(100% );
+            left: calc(100%);
             transform: translateY(-50%);
+            @include media('<widescreen') {
+                width: 300px;
+                left: calc(98%);
+            }
+            @include media('<desktop') {
+                width: 300px;
+                left: calc(61vw);
+                width: 250px;
+            }
+            @include media('<tablet') {
+                position: static;
+                padding-top: 28px;
+                transform: translate(0);
+                width:300px;
+            }
+            img {
+                @include media('<desktop') {
+                    width: 100%;
+                }
+            }
         }
     }
 }
