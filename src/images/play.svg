@@ -1,0 +1,26 @@
+<svg id="iconmonstr-video-15" xmlns="http://www.w3.org/2000/svg" width="118" height="117" viewBox="0 0 118 117">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #eb5322;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Clip_2" data-name="Clip 2" class="cls-1" width="118" height="117"/>
+  <g id="Mask_by_Clip_2" data-name="Mask by Clip 2">
+    <path id="Fill_1" data-name="Fill 1" class="cls-2" d="M1265.75,2211.75v-47.5l42.75,24.44ZM1337,2188a57,57,0,1,1-57-57A57,57,0,0,1,1337,2188Zm-57-47.5a47.5,47.5,0,1,0,47.5,47.5,47.556,47.556,0,0,0-47.5-47.5h0Z" transform="translate(-1220 -2130)"/>
+    <path id="Fill_1_Copy" data-name="Fill 1 Copy" class="cls-3" d="M1262.75,2210.75v-47.5l42.75,24.44ZM1334,2187a57,57,0,1,1-57-57A57,57,0,0,1,1334,2187Zm-57-47.5a47.5,47.5,0,1,0,47.5,47.5,47.556,47.556,0,0,0-47.5-47.5h0Z" transform="translate(-1220 -2130)"/>
+  </g>
+</svg>

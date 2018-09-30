@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="46.875" viewBox="0 0 96 46.875">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill-opacity: 0;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2"/>
+      <feFlood result="flood" flood-opacity="0.3"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Flêche" class="cls-1">
+    <g>
+      <path id="Clip_2" data-name="Clip 2" class="cls-2" d="M330,337.123h45.828V384H330V337.123Z" transform="translate(-330 -337.125)"/>
+      <g id="Mask_by_Clip_2" data-name="Mask by Clip 2">
+        <path id="Fill_1" data-name="Fill 1" class="cls-3" d="M369.157,337.716c7.835-2.4,9.512,3,1,6.987-10.393,4.863-21.135,9.433-31.954,13.917L338.691,354c11.024,9.654,21.979,19.474,32.973,28.789,1.181,1,.619,1.691-0.627.812-10.974-7.736-23.963-15.837-36.284-24.5L330,355.757l5.417-2.956c11.313-6.173,22.773-11.724,33.74-15.085" transform="translate(-330 -337.125)"/>
+      </g>
+    </g>
+    <path id="Fill_4" data-name="Fill 4" class="cls-3" d="M342.942,362.205a9.027,9.027,0,0,1-4.978-2.656,3.219,3.219,0,0,1-.79-3.26,3.605,3.605,0,0,1,2.517-2.061,9.474,9.474,0,0,1,5.142.307,129.125,129.125,0,0,0,19.523,3.942,173.3,173.3,0,0,0,20.131,1.337A205.5,205.5,0,0,0,425,355.992c1.181-.22,1.387.681,0.221,0.991a224.107,224.107,0,0,1-40.573,7.429,166.538,166.538,0,0,1-20.814.439,121.242,121.242,0,0,1-20.894-2.646" transform="translate(-330 -337.125)"/>
+  </g>
+</svg>

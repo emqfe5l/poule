@@ -43,7 +43,10 @@
     }
 
     .swiper-container {
-        padding-bottom: 45px;
+        padding-bottom: 55px;
+        @include media('<tablet'){
+            padding-bottom: 42px;
+        }
 
     }
     .swiper-slide {
@@ -53,7 +56,16 @@
     .swiper-button-next {
         background-image: none;
         width: 60px;
+        svg path {
+            @include animate(fill);
+            fill: $white;
+        }
 
+        &:hover {
+            svg path {
+                fill: $dark-grey;
+            }
+        }
         @include media('<phone') {
             display: none;
         }
@@ -78,7 +90,7 @@
     }
 
     .swiper-pagination {
-        bottom: 5px;
+        bottom: -3px
     }
 
 

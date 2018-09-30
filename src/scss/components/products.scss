@@ -1,7 +1,7 @@
 .products {
     background-image: url('../images/fullscreenbg.jpg');
     min-height: 620px;
-    padding: 45px 0;
+    padding: 25px 0 10px;
 
     h2 {
         font-family: 'campersans_regular';
@@ -13,6 +13,16 @@
         }
     }
 
+    .section-headings {
+        margin-bottom: 15px;
+
+        &__introduction {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+    }
+
     &__body {
         display: flex;
         align-items: center;
@@ -20,7 +30,7 @@
 
         @include media('<tablet') {
             display: block;
-            margin: 0 -15px;
+            margin: 0 -15px 5px;
         }
     }
 
@@ -43,6 +53,12 @@
         width: 33.3%;
         min-height: 250px;
         color: $white;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         @include media('<900px') {
             width: 50%;
@@ -69,7 +85,8 @@
                 &:before {
                     background-image: url('../images/cuire.svg');
                     left: -20px;
-                    @include media('<tablet'){
+
+                    @include media('<tablet') {
                         left: -70px;
                     }
                 }
@@ -100,7 +117,8 @@
                 &:before {
                     background-image: url('../images/rechauffer.svg');
                     left: -50px;
-                    @include media('<tablet'){
+
+                    @include media('<tablet') {
                         left: -60px;
                     }
                 }
@@ -127,7 +145,8 @@
                 &:before {
                     background-image: url('../images/servir.svg');
                     left: -20px;
-                    @include media('<tablet'){
+
+                    @include media('<tablet') {
                         left: -70px;
                     }
                 }
@@ -175,6 +194,7 @@
             font-size: 29px;
             max-width: none;
             display: inline-block;
+            margin-left: 60px;
         }
 
         .stroke-wrapper {
@@ -204,10 +224,11 @@
     .section__links {
         display: flex;
         justify-content: space-around;
-        padding-top: 50px;
+        padding: 20px 110px;
 
         @include media('<tablet') {
-            flex-direction: column
+            flex-direction: column;
+            padding: 30px 0px;
         }
 
         h3 {
@@ -217,13 +238,29 @@
             text-align: center;
 
             @include media('<tablet') {
-                margin-bottom: 20px;
+                margin-bottom: 12px;
+                padding: 0 50px;
             }
+        }
+
+        .form-wrapper {
+            @include media('<phone') {
+                margin-bottom: 00px;
+            }
+        }
+
+        .links-wrapper {
+            h3 {
+                @include media('<phone') {
+                    margin-bottom: 0px;
+                }
+            }
+
         }
 
         .single-input-form {
             @include media('<tablet') {
-                margin-bottom: 45px;
+                margin-bottom: 27px;
             }
         }
     }
@@ -237,6 +274,13 @@
 
         @include media('<tablet') {
             max-width: none;
+        }
+
+        @include media('<phone') {
+            padding-top: 0px;
+            justify-content: space-between;
+            align-items: space-between;
+
         }
 
         a {
