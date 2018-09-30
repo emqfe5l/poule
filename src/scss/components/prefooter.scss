@@ -1,0 +1,39 @@
+.prefooter {
+    background-image: url('../images/bg-orange.jpg');
+    padding: 83px 15px 81px;
+    text-align: center;
+    color: $white;
+    margin-top: -17px;
+    position: relative;
+    &:before{
+      position: absolute;
+      
+      right:15%;
+      content: '';
+      background-image: url('../images/bg-foot-print2.svg');
+      width:93px;
+      height: 485px;
+      background-size: 100% 100%;
+      background-position: 50% 100%;
+      top: 0;
+      transform: translateY(-100%);
+    }
+    .h3 {
+        font-size: 82px;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+    .content-holder {
+        max-width: 460px;
+        margin: 0 auto;
+        position: relative;
+        .poule-image {
+            width: 400px;
+            
+            position: absolute;
+            top: 50%;
+            left: calc(100% );
+            transform: translateY(-50%);
+        }
+    }
+}
