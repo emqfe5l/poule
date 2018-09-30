@@ -1,0 +1,142 @@
+.short-product-info-section {
+    .product-info-holder {
+        margin-bottom: 0px;
+    }
+    .back-link {
+        margin-bottom: 0;
+    }
+    .product-info-row {
+        padding: 72px 80px 30px 80px;
+        display: flex;
+        align-items: center;
+        @include media('<desktop') {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include media('<tablet') {
+            position: relative;
+            flex-wrap: wrap;
+            padding-bottom: 50px;
+            padding-top: 92px;
+        }
+        .list-inline {
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-family: $alt-font-1;
+            font-size:38px;
+            line-height: 1.4;
+              margin: 0;
+            @include media('<desktop') {
+              
+              
+            }
+            li {
+                margin-right: 30px;
+            }
+        }
+        .img-col {
+            width: 56%;
+            flex-shrink: 0;
+            padding: 10px;
+            text-align: center;
+            background-color: $white;
+            box-shadow: 0 0 15px 0px rgba(0, 0, 0, .2);
+            @include media('<desktop') {
+                width: 65%;
+            }
+            @include media('<tablet') {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            @include media('<phone') {
+                margin: 0 -10px;
+                width: calc(100% + 20px)
+            }
+            img{
+              @include media('<tablet') {
+                width: 72%;
+                margin: 0 auto;
+              }
+            }
+        }
+        .text-col {
+            background-color: $orange;
+            margin: 0 0 10px -55px;
+            color: $white;
+            text-align: center;
+            border-radius: 28px 0 28px 28px;
+            padding: 37px 30px;
+            position: relative;
+            @include media('<desktop') {
+                padding: 20px 15px;
+                position: static;
+            }
+            @include media('<tablet') {
+                width: 100%;
+                margin: 0;
+                padding:35px 15px;
+            }
+            @include media('<phone') {
+                margin: 0 -10px;
+                border-radius: 0;
+                width: calc(100% + 20px)
+            }
+            p {
+                margin-bottom: 25px;
+            }
+            .decor-el {
+                position: absolute;
+                top: 5px;
+                right: 0;
+                transform: translateY(-100%);
+                color: #005f85;
+                font-family: $alt-font-2;
+                font-size: 30px;
+                @include media('<tablet') {
+                    font-size: 24px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 0;
+                    right: 0;
+                }
+                img {
+                    @include media('<tablet') {
+                        width: 80px;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    margin-bottom: -30px;
+                }
+                @include media('<tablet') {
+                    top: 82px;
+                }
+            }
+        }
+        .h1 {
+            font-size: 52px;
+            font-family: $alt-font-2;
+            font-weight: 500;
+            margin-bottom: 5px;
+            line-height: .8;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            @include media('<desktop') {
+                font-size: 40px;
+            }
+            img {
+                width: 45px;
+                display: inline-block;
+                padding-left: 20px;
+            }
+        }
+        .btn {
+            font-size: 36px;
+            min-width: 200px;
+        }
+    }
+}

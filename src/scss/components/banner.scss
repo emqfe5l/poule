@@ -1,32 +1,35 @@
-.banner{
-  padding: 46px 0 53px;
-  color:$white;
-  text-align: center;
-  font-size: 40px;
-  text-shadow: 2px 1px 1px $orange;
-  border-top:2px solid #b9b1aa;
-  @include media('<tablet') {
- padding:65px 0;
-   line-height: .6;
-  }
-  strong{
-    font-weight: 400;
-    display: block;
-    margin-bottom: 10px;
-    font-family: $alt-font-2;
-  }
-  .h1{
-    font-size: 102px;
-    font-family: $alt-font-1;
-    line-height: .5;
+.banner {
+    padding: 46px 0 53px;
+    color: $white;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 1px 1px $orange;
+    border-top: 2px solid #b9b1aa;
     @include media('<tablet') {
-      font-size: 82px;
+        padding: 65px 0;
+        line-height: .6;
     }
-  }
-  &-bg-blue{
-    background-color: #005f85;
-    background-image: url('../images/bg-blue.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-  }
+    strong {
+        font-weight: 400;
+        display: block;
+        margin-bottom: 10px;
+        font-family: $alt-font-2;
+    }
+    .h1 {
+        font-size: 102px;
+        font-family: $alt-font-1;
+        line-height: .5;
+        &:only-child{
+          padding-top: 50px;
+        }
+        @include media('<tablet') {
+            font-size: 82px;
+        }
+    }
+    &-bg-blue {
+        background-color: #005f85;
+        background-image: url('../images/bg-blue.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+    }
 }

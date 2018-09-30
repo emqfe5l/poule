@@ -17,33 +17,34 @@
             }
         }
     }
-    .back-link {
-        color: $orange;
-        font-size: 32px;
-        padding-left: 50px;
-        margin-bottom: 10px;
-        position: relative;
-        text-decoration: none;
-        font-family: $alt-font-2;
-        margin-bottom: 27px;
-        display: inline-block;
-        @include media('<phone') {
-            margin-top: -10px;
-            margin-bottom: 11px;
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image: url('../images/arrow-left.svg');
-            width: 47px;
-            height: 26px;
-            background-size: 100% 100%;
-            @include media('<widescreen') {
-                right: -55px;
-            }
+}
+
+.back-link {
+    color: $orange;
+    font-size: 32px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+    font-family: $alt-font-2;
+    margin-bottom: 27px;
+    display: inline-block;
+    @include media('<phone') {
+        margin-top: -10px;
+        margin-bottom: 11px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/arrow-left.svg');
+        width: 47px;
+        height: 26px;
+        background-size: 100% 100%;
+        @include media('<widescreen') {
+            right: -55px;
         }
     }
 }
@@ -60,7 +61,7 @@
         padding-left: 0;
     }
     @include media('<tablet') {
-     padding-bottom: 9px;
+        padding-bottom: 9px;
     }
     .text-holder {
         padding: 31px 5px 31px 23px;
@@ -70,7 +71,7 @@
         @include media('<tablet') {
             padding: 9px 0 0 0;
         }
-        p{
+        p {
             @include media('<tablet') {
                 margin-bottom: 0;
             }
@@ -88,7 +89,7 @@
         flex-shrink: 0;
         margin: 11px 22px;
         @include media('<tablet') {
-            margin:3px;
+            margin: 3px;
         }
     }
     .logo-holder3 {
@@ -96,13 +97,12 @@
         margin: 24px 10px;
         flex-shrink: 0;
         @include media('<tablet') {
-            margin:12px;
+            margin: 12px;
         }
     }
 }
 
 .products-wrapper {
-    
     .h3 {
         padding: 5px 58px 0px 50px;
         font-weight: 400;
@@ -121,7 +121,7 @@
             font-size: 52px;
             padding: 5px 20px 0;
             font-weight: 300;
-            margin-bottom: 13px; 
+            margin-bottom: 13px;
         }
     }
 }
@@ -216,10 +216,10 @@
                 width: auto;
                 object-fit: contain;
                 @include media('<tablet') {
-                 height: 200px;
+                    height: 200px;
                 }
                 @include media('<phone') {
-                 height: 176px;
+                    height: 176px;
                 }
             }
         }

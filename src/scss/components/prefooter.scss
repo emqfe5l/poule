@@ -9,21 +9,23 @@
     @include media('<tablet') {
         padding-top: 59px;
     }
-    .container {
-        position: relative;
-        &:before {
-            position: absolute;
-            right: -30px;
-            content: '';
-            background-image: url('../images/bg-foot-print2.svg');
-            width: 116px;
-            height: 540px;
-            background-size: 100% 100%;
-            background-position: 50% 100%;
-            top: -100px;
-            transform: translateY(-100%);
-            @include media('<desktop') {
-                display: none;
+    &.has-decor {
+        .container {
+            position: relative;
+            &:before {
+                position: absolute;
+                right: -30px;
+                content: '';
+                background-image: url('../images/bg-foot-print2.svg');
+                width: 116px;
+                height: 540px;
+                background-size: 100% 100%;
+                background-position: 50% 100%;
+                top: -100px;
+                transform: translateY(-100%);
+                @include media('<desktop') {
+                    display: none;
+                }
             }
         }
     }
@@ -73,7 +75,7 @@
                 position: static;
                 padding-top: 28px;
                 transform: translate(0);
-                width:300px;
+                width: 300px;
             }
             img {
                 @include media('<desktop') {
