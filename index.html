@@ -18,7 +18,7 @@
                         <div class="header__logo-wrapper">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="assets/images/logo.png" alt="poule toque">
+                                    <img src="assets/images/Logo.svg" alt="poule toque">
                                 </a>
                             </div>
                             <div class="hamburger-wrapper">
@@ -56,7 +56,21 @@
                         <nav class="main-nav">
                             <ul>
                                 <li><a href="#">Poule et toque</a></li>
-                                <li><a href="#">Nos produits</a></li>
+                                <li><a class="has-inner-menu" href="#">Nos produits</a>
+                                    <ul class="inner-nav">
+                                        <li class="inner-nav__item">
+                                            <a href="#">
+                                                <span>Pret a <span class="stroke-wrapper">cuire</span></span>
+                                            </a></li>
+                                        <li class="inner-nav__item">
+                                            <a href="#">
+                                                <span>Pret a <span class="stroke-wrapper">réchauffer</span></span>
+                                            </a></li>
+                                        <li class="inner-nav__item"> <a href="#" class="">
+                                                <span class="">Pret a <span class="stroke-wrapper">Servir</span></span>
+                                            </a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Quoi de n’oeuf ?</a></li>
                                 <li><a href="#">Nous contacter</a></li>
                             </ul>
@@ -94,10 +108,33 @@
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev">
-                        <img src="assets/images/arrow-left.png" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="47">
+                            <g>
+                                <path fill-opacity="0" fill-rule="evenodd" d="M330 337h46v47h-46v-47z" data-name="Clip 2"
+                                    transform="translate(-330 -337)" />
+                                <g data-name="Mask by Clip 2">
+                                    <path d="M369 338c8-3 10 3 1 7l-32 14 1-5 33 29c1 1 0 1-1 1l-36-25-5-3 5-3c12-6 23-12 34-15"
+                                        class="cls-3" data-name="Fill 1" transform="translate(-330 -337)" />
+                                </g>
+                                <path d="M343 362a9 9 0 0 1-5-2 3 3 0 0 1-1-4 4 4 0 0 1 3-2 9 9 0 0 1 5 1 129 129 0 0 0 19 3 173 173 0 0 0 20 2 206 206 0 0 0 41-4v1a224 224 0 0 1-40 7 167 167 0 0 1-21 1 121 121 0 0 1-21-3"
+                                    class="cls-3" data-name="Fill 4" transform="translate(-330 -337)" />
+                            </g>
+                        </svg>
+
                     </div>
                     <div class="swiper-button-next">
-                        <img src="assets/images/arrow-right.png" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="47">
+                            <g data-name="Flêche Copy">
+                                <path fill-opacity="0" fill-rule="evenodd" d="M1590 337h-46v47h46v-47z" data-name="Clip 2"
+                                    transform="translate(-1494 -337)" />
+                                <g data-name="Mask by Clip 2">
+                                    <path d="M1551 338c-8-3-10 3-1 7l32 14-1-5-33 29c-1 1 0 1 1 1l36-25 5-3-5-3c-12-6-23-12-34-15"
+                                        class="cls-3" data-name="Fill 1" transform="translate(-1494 -337)" />
+                                </g>
+                                <path d="M1577 362a9 9 0 0 0 5-2 3 3 0 0 0 1-4 4 4 0 0 0-3-2 9 9 0 0 0-5 1 129 129 0 0 1-19 3 173 173 0 0 1-20 2 205 205 0 0 1-41-4v1a224 224 0 0 0 40 7 167 167 0 0 0 21 1 121 121 0 0 0 21-3"
+                                    class="cls-3" data-name="Fill 4" transform="translate(-1494 -337)" />
+                            </g>
+                        </svg>
                     </div>
 
                 </div>
@@ -135,19 +172,19 @@
                     </div>
                     <div class="products__body">
                         <div class="products__items-wrapper">
-                            <div class="products__item">
+                            <a href="#" class="products__item">
                                 <div class="products__item-title">Pret a <span class="stroke-wrapper">cuire</span></div>
                                 <div class="products__item-description">Pour ajouter sa patte !</div>
-                            </div>
-                            <div class="products__item">
+                            </a>
+                            <a href="#" class="products__item">
                                 <div class="products__item-title">Pret a <span class="stroke-wrapper">rechauffer</span></div>
                                 <div class="products__item-description">Pour ne pas se retrouver le bec dans l’eau !
                                 </div>
-                            </div>
-                            <div class="products__item">
+                            </a>
+                            <a href="#" class="products__item">
                                 <div class="products__item-title">Pret a <span class="stroke-wrapper">servir</span></div>
                                 <div class="products__item-description">Pour être en poule position !</div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="section__links">
@@ -203,6 +240,17 @@
                         <div class="stages__inner-wrapper">
                             <div class="stages__video-holder">
                                 <img class="video__placeholder" src="assets/images/video-placeholder.jpg" alt="">
+                                <button class="play-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="118" height="117">
+                                        <path fill="none" d="M0 0h118v117H0z" data-name="Clip 2" />
+                                        <g fill-rule="evenodd" data-name="Mask by Clip 2">
+                                            <path fill="#eb5322" d="M46 82V34l43 25zm71-24A57 57 0 1 1 60 1a57 57 0 0 1 57 57zM60 11a48 48 0 1 0 48 47 48 48 0 0 0-48-47z"
+                                                data-name="Fill 1" />
+                                            <path fill="#fff" d="M43 81V33l43 25zm71-24A57 57 0 1 1 57 0a57 57 0 0 1 57 57zM57 10a48 48 0 1 0 48 47 48 48 0 0 0-48-47z"
+                                                data-name="Fill 1 Copy" />
+                                        </g>
+                                    </svg>
+                                </button>
                             </div>
                             <div class="stages__item">
                                 <div class="stages__item-info">
@@ -227,25 +275,41 @@
                         <div class="swiper-wrapper">
 
                             <div class="offers__item swiper-slide">
-                                <div class="offers__img-holder"><img src="assets/images/offer-1.jpg" alt=""></div>
+                                <div class="offers__img-holder"><img src="assets/images/offer-1.jpg" alt="">
+                                    <div class="offers__item-overlay">
+                                        <span>voir plus</span>
+                                    </div>
+                                </div>
                                 <div class="offers__title-holder">
                                     <h3>Cordon bleu l'Authentique</h3>
                                 </div>
                             </div>
                             <div class="offers__item swiper-slide">
-                                <div class="offers__img-holder"><img src="assets/images/offer-2.jpg" alt=""></div>
+                                <div class="offers__img-holder"><img src="assets/images/offer-2.jpg" alt="">
+                                    <div class="offers__item-overlay">
+                                        <span>voir plus</span>
+                                    </div>
+                                </div>
                                 <div class="offers__title-holder">
                                     <h3>Cuisse confite</h3>
                                 </div>
                             </div>
                             <div class="offers__item swiper-slide">
-                                <div class="offers__img-holder"><img src="assets/images/offer-3.jpg" alt=""></div>
+                                <div class="offers__img-holder"><img src="assets/images/offer-3.jpg" alt="">
+                                    <div class="offers__item-overlay">
+                                        <span>voir plus</span>
+                                    </div>
+                                </div>
                                 <div class="offers__title-holder">
                                     <h3>Sot l'y laisse de dinde</h3>
                                 </div>
                             </div>
                             <div class="offers__item swiper-slide">
-                                <div class="offers__img-holder"><img src="assets/images/offer-4.jpg" alt=""></div>
+                                <div class="offers__img-holder"><img src="assets/images/offer-4.jpg" alt="">
+                                    <div class="offers__item-overlay">
+                                        <span>voir plus</span>
+                                    </div>
+                                </div>
                                 <div class="offers__title-holder">
                                     <h3>Tournedos de canard</h3>
                                 </div>
@@ -280,7 +344,7 @@
                 <div class="footer__wrapper">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo.png" alt="poule toque">
+                            <img src="assets/images/Logo.svg" alt="poule toque">
                         </a>
                     </div>
                     <div class="footer__nav">
@@ -323,15 +387,42 @@
                 </div>
                 <div class="popup__body">
                     <a class="popup__item">
-                        <img src="assets/images/popup-1.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="94" data-name="Page 1">
+                            <path fill-opacity="0" fill-rule="evenodd" d="M0 0h130v94H0V0z" data-name="Clip 2" />
+                            <g data-name="Mask by Clip 2">
+                                <path fill="#000" fill-rule="evenodd" d="M19 14a1 1 0 0 1 1 0v15a2 2 0 0 0 2 0V14a1 1 0 0 1 2 0v15a2 2 0 0 0 2 0V14a1 1 0 0 1 1 0v15a2 2 0 0 0 2 0V14a1 1 0 0 1 2 0v19a5 5 0 0 1-4 5l1 40c0 1-1 2-3 2s-3-1-3-2l1-40c-2 0-4-3-4-5V14zm45 63a32 32 0 1 1 32-31 32 32 0 0 1-32 31zm41-29c-2 0-6-1-6-14 0-19 7-24 8-24l1 3v26l1 39c0 1-1 2-3 2s-2-1-2-2l1-30zM8 61c0 3-2 5-5 5a6 6 0 0 1-3 0v18a11 11 0 0 0 11 10h109a11 11 0 0 0 10-10V65a6 6 0 0 1-4 1c-3 0-6-2-6-5V33c0-3 3-5 6-5a6 6 0 0 1 4 2V11a11 11 0 0 0-10-11H11A11 11 0 0 0 0 11v18a6 6 0 0 1 3-1c3 0 5 2 5 5v28z"
+                                    data-name="Fill 1" />
+                            </g>
+                        </svg>
                         <p class="popup__item-title">Restauration collective</p>
                     </a>
                     <a class="popup__item">
-                        <img src="assets/images/popup-2.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="114" height="109" data-name="Page 1">
+                            <defs />
+                            <path d="M905 480l-2 32 22-3-3-31z" class="cls-1" data-name="Fill 1" transform="translate(-903 -403)" />
+                            <path d=" M926 477l9-3a15 15 0 0 1 5-1h24c4 0 3 2 3 2 0 3-5 3-5 3l-11 2c-3 1-2 4-2
+                                4h22a23 23 0 0 0 8-4c4-3 12-9 14-6s0 6 0 6l-22 16a18 18 0 0 1-7 3h-24l-12 2-2-24"
+                                class="cls-1" data-name="Fill 2" transform="translate(-903 -403)" />
+                            <path d="M970 414a6 6 0 0 0 1-1 6 6 0 1 0-12 0 7 7 0 0 0 0 1 69 69 0 0 1 11 0m-47 37c7-11 12-21 32-31 0 0-25 6-32 31m9-4c4-7 7-13 21-20 0 0-17 4-21 20m6-1c4-5 6-9 15-14 0 0-11 3-15 14m36-31c37 5 37 41 37 41h-91s-2-36 35-41a10 10 0 0 1 0-2 10 10 0 1 1 19 0 10 10 0 0 1 0 2"
+                                class="cls-1" data-name="Fill 4" transform="translate(-903 -403)" />
+                            <path fill-opacity="0" d="M9 57h106v9H9z" data-name="Clip 7" />
+                            <g id="Mask_by_Clip_7" data-name="Mask by Clip 7">
+                                <path id="Fill_6" d="M1017 464a4 4 0 0 0-4-4h-97a5 5 0 0 0 0 9h97a4 4 0 0 0 4-5" class="cls-1"
+                                    data-name="Fill 6" transform="translate(-903 -403)" />
+                            </g>
+                        </svg>
                         <p class="popup__item-title">Restauration COMMERCIALE</p>
                     </a>
                     <a class="popup__item">
-                        <img src="assets/images/popup-3.svg" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Page_1" width="102" height="104" data-name="Page 1">
+                            <defs />
+                            <path id="Fill_1" fill="#070200" fill-rule="evenodd" d="M1340 492z" data-name="Fill 1"
+                                transform="translate(-1320 -413)" />
+                            <path id="Fill_3" d="M1391 430a5 5 0 0 1 1 4l5-6h-4a18 18 0 0 0-11 2l-5 6a22 22 0 0 0-1 2 26 26 0 0 0-2 10 28 28 0 0 0 1 5l7-8c-7 2-6-2-4-3 2-2 6 0 7 0l1-1c-10-4-6-7-3-7 2 0 4 4 4 5l2-2c-4-9 0-9 2-7zm-33 37a5 5 0 0 1 1 4l5-6a39 39 0 0 0-4-1 21 21 0 0 0-10 2l-8 9-1 1a29 29 0 0 0-2 11 34 34 0 0 0 1 5l7-9c-7 2-6-2-4-3 2-2 6-1 7 0l2-1c-10-5-7-8-3-8 2 1 4 4 4 6l2-3c-4-10 1-9 3-7zm6-7a27 27 0 0 1 3 1l5-5a23 23 0 0 1-1-4zm46-42a27 27 0 0 0 6 3l-82 90a1 1 0 0 1 0 1l-4-1c-6-3-2-6-2-6l10-12-1 2a22 22 0 0 1-1-4l-13 14a5 5 0 0 1-2-7l15-16a28 28 0 0 1 6-14 21 21 0 0 1 13-8l16-17a26 26 0 0 1 6-12 19 19 0 0 1 11-7l9-9s4-3 7-1h1l-9 10a25 25 0 0 1 4 1l4-4s3-5 6-3z"
+                                class="cls-2" data-name="Fill 3" transform="translate(-1320 -413)" />
+                            <path id="Fill_5" d="M1406 499s16-22 9-52c0 16 1 28-9 52m-3-9a45 45 0 0 0 6-35c0 11 1 19-6 35m1-29c1 7 1 13-3 23a30 30 0 0 0 3-23m13-34s5-7 5-1l-2 60c0 18-15 21-15 21l-61 10c-9 1-3-6-3-6l76-84"
+                                class="cls-2" data-name="Fill 5" transform="translate(-1320 -413)" />
+                        </svg>
                         <p class="popup__item-title">SNACKING</p>
                     </a>
                 </div>

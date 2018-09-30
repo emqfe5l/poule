@@ -21,6 +21,8 @@
         position: absolute;
         bottom: 0;
         left: 75px;
+        max-width: 190px;
+        overflow: hidden;
 
         @include media('<1100px') {
             max-width: 125px;
@@ -29,15 +31,17 @@
         @include media('<tablet') {
             position: relative;
             bottom: auto;
-            top: -40px;
+            top: -30px;
             left: 50%;
             transform: translate(-50%);
             margin-bottom: -40px;
-            padding-bottom: 20px;
+            padding-bottom: 24px;
+            max-width: 155px;
         }
 
         img {
             vertical-align: top;
+            margin-bottom: -13px;
         }
     }
 
@@ -97,6 +101,9 @@
             color: $white;
             text-decoration: none;
             font-size: 12px;
+            @include media('<tablet'){
+                font-size: 14px;
+            }
 
             &:hover {
                 color: $orange;

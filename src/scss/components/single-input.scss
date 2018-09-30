@@ -5,10 +5,14 @@
 
     @include media('<tablet') {
         justify-content: center;
-        max-width: 90%;
+        max-width: 100%;
         margin: 0 auto;
+        .newsletter & {
+            max-width: 90%;
+        }
     }
 
+    input[type="email"],
     input[type="text"] {
         @include placeholder() {
             font-size: 18px;
@@ -22,9 +26,21 @@
         font-size: 18px;
         color: #666;
 
+        .newsletter & {
+            min-width: 318px;
+            border-radius: 10px 0 0 10px;
+
+            @include media('<tablet') {
+                min-width: 150px;
+            }
+
+        }
+
         @include media('<tablet') {
             min-width: 200px;
         }
+
+
     }
 
     .submit-btn {
@@ -34,6 +50,7 @@
         border: none;
         width: 60px;
         border-radius: 0 10px 10px 0;
+
         &:hover {
             opacity: .7;
         }

@@ -6,6 +6,7 @@
 import heroSwiper from './modules/heroSwiper';
 import offersSwiper from './modules/offersSwiper';
 import hamburger from './modules/hamburger';
+import innerNav from './modules/innerNavigation';
 
 ( ($) => {
   'use strict';
@@ -15,6 +16,7 @@ import hamburger from './modules/hamburger';
     heroSwiper.init();
     offersSwiper.init();
     hamburger.init();
+    innerNav.init();
   });
 
 })(jQuery);

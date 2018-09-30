@@ -1,10 +1,24 @@
 .stages {
-    padding-top: 50px;
+    padding-top: 36px;
     padding-bottom: 30px;
+    background-image: url('../images/pattes-2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 90% 0;
+    @include media('<desktop'){
+        background-image: none;
+    }
+
+    .section-headings {
+        margin-bottom: 9px;
+    }
 
     h2 {
         margin-bottom: 0;
         color: $dark-grey;
+        @include media('<tablet'){
+            font-size: 62px;
+        }
     }
 
 
@@ -26,6 +40,7 @@
             flex-direction: column;
             box-shadow: none;
             max-width: none;
+            margin-bottom: 15px;
         }
     }
 
@@ -88,6 +103,7 @@
         img {
             vertical-align: top;
             height: 100%;
+            object-fit: cover;
 
             @include media('<950px') {
                 width: 100%;
@@ -102,7 +118,7 @@
         background-color: $orange;
         color: $white;
         text-align: center;
-        padding: 15px 15px 10px;
+        padding: 25px 35px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -130,11 +146,42 @@
 
     &__video-holder {
         flex: 1;
+        position: relative;
 
         img {
             vertical-align: top;
-            @include media('<920px'){
+            object-fit: cover;
+
+            @include media('<920px') {
                 width: 100%;
+            }
+        }
+
+        .play-btn {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            z-index: 10;
+            top: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            svg g path {
+                @include animate(fill);
+            }
+
+            &:hover {
+                svg g path {
+
+                    &:nth-child(1) {
+                        fill: $white;
+                    }
+
+                    &:nth-child(2) {
+                        fill: $orange;
+                    }
+                }
             }
         }
     }
@@ -142,6 +189,12 @@
     .btn-holder {
         display: flex;
         justify-content: center;
+        .btn {
+            &:hover {
+                background-color: rgba($orange, .8);
+                color: $white;
+            }
+        }
 
     }
 
