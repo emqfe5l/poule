@@ -1,3 +1,133 @@
-.product-types-section{
-  overflow: hidden;
+.product-types-section {
+    overflow: hidden;
+    background-color: $blue-primary;
+    .product-type-info {
+        max-width: 780px;
+        margin: 0 auto 8px;
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        @include media('<tablet') {
+            flex-wrap: wrap;
+            padding: 0 ;
+            margin-bottom: -8px;
+        }
+        .img-holder {
+            width: 180px;
+            flex-shrink: 0;
+            margin-right: 35px;
+            @include media('<tablet') {
+                width: 216px;
+                margin: 0 auto;
+                display: block;
+                align-items: center;
+              padding-top: 36px;
+            }
+            img {
+                width: 100%;
+                display: inline-block;
+            }
+        }
+        .text-holder {
+            color: $white;
+            line-height: 1.45;
+            padding-top: 20px;
+            @include media('<tablet') {
+              padding-top: 0;
+            }
+            .h2 {
+                color: #87bee8;
+                font-size: 37px;
+                margin-bottom: 10px;
+                font-family: $alt-font-2;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .single-input-form {
+        max-width: 780px;
+        width: 100%;
+        margin: 0 auto 59px;
+        padding-top: 15px;
+        @include media('<tablet') {
+          margin-bottom: 42px;
+        }
+        input {
+            min-width: 90%;
+            padding: 0.4em 1.3em;
+            @include media('<tablet') {
+              min-width:70%;
+            }
+        }
+        .submit-btn {
+            width: 80px;
+            @include media('<tablet') {
+              width:111px;
+            }
+        }
+    }
+}
+
+.filter-switch {
+    max-width: 720px;
+    margin: 0 auto;
+    color: $white;
+    .h2 {
+        font-size: 65px;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-bottom: 11px;
+        text-transform: uppercase;
+        text-align: center;
+        @include media('<tablet') {
+          letter-spacing:0;
+        }
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media('<phone') {
+         flex-wrap: wrap;
+         justify-content: center;
+        }
+        .btn {
+            height: auto;
+            padding: 6px 3px;
+            margin: 0 10px 15px;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 220px;
+            border-radius: 8px;
+            font-family: $alt-font-2;
+            @include animate(opacity);
+            @include media('<tablet') {
+              margin-bottom: 9px;
+            }
+            &:hover {
+                opacity: .8;
+            }
+            img {
+                width: 26px;
+                margin-right: 5px;
+            }
+            &.btn-drop {
+                background-color: $white;
+                color: #009b2d;
+            }
+            .ttu {
+                text-transform: uppercase;
+                font-family: $alt-font-1;
+                font-size: 40px;
+            }
+            &.btn-frozen {
+                background-color: #03acee;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
 }
