@@ -32,4 +32,10 @@
         background-size: cover;
         background-position: 50% 50%;
     }
+    &.banner-bg-orange{
+        background-color: $orange;
+        background-image: url('../images/bg-orange.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+    }
 }

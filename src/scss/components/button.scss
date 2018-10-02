@@ -21,4 +21,13 @@
     .btn-long{
         //  min-width: 350px;
     }
+    &.btn-more{
+     background-color: $orange;
+     text-align: center;
+     @include animate(opacity);
+     &:hover{
+         color:$white;
+         opacity: .8;
+     }
+    }
 }
