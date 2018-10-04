@@ -1,0 +1,38 @@
+
+.privacy-policy{
+  background-color: $white;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.41;
+  letter-spacing: -0.7px;
+  position: relative;
+  @include media('<desktop') {
+    padding-bottom: 40px;
+  }
+  @include media('<tablet') {
+  padding-top: 25px;
+  }  
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background-color: $white;
+  }
+  .container{
+    
+    margin: 0 auto;
+    max-width: 810px;
+  }
+  .h2{
+    font-size: 68px;
+line-height: 0.8;
+margin-bottom: 5px;
+@include media('<tablet') {
+  font-size: 64px;
+}
+
+  }
+}

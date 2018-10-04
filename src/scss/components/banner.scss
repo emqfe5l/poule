@@ -38,4 +38,10 @@
         background-size: cover;
         background-position: 50% 50%;
     }
+    &.banner-bg-beige{
+        background-color: $orange;
+        background-image: url('../images/bg-beige.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+    }
 }
