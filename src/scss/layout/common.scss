@@ -6,3 +6,13 @@
   text-transform: uppercase;
   font-size: 50px;
 }
+
+.decor-divider {
+	border-top: 4px dotted $orange;
+	width: 100%;
+	height: 0;
+}
+
+.marked-orange {
+	color: $orange;
+}
