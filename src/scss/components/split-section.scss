@@ -13,6 +13,9 @@
             padding: 0 0 18px;
             &.different-size {
                 padding: 50px 0 30px;
+                @include media('<phone') {
+                    padding: 25px 0 20px;
+                }
             }
         }
     }
@@ -23,7 +26,6 @@
         background-color: $white;
         .split-block {
             padding: 0;
-
             &.different-size {
                 .right-side {
                     padding-left: 0;
@@ -32,9 +34,99 @@
         }
         .left-side {
             padding-left: 6%;
-
             @include media('<widescreen') {
                 padding-left: 2%;
+            }
+            @include media('<tablet') {
+                padding-left: 0;
+                padding-top: 25px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+    &.single-section {
+        padding-top: 45px;
+        @include media('<tablet') {
+            padding-top: 15px;
+        }
+        .split-block {
+            padding: 0 0 35px;
+        }
+        .right-side {
+            position: relative;
+            padding-left: 0;
+            margin-left: 50px;
+            width: calc(50% - 50px);
+            @include media('<tablet') {
+                margin-left: 0;
+            }
+            .strong {
+                font-size: 62px;
+                margin-bottom: 22px;
+            }
+            .single-text {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                @include media('<tablet') {
+                    position: static;
+                }
+            }
+        }
+        .left-side {
+            padding-left: 6%;
+        }
+        .xs-hidden {
+            @include media('<tablet') {
+                display: none !important;
+            }
+        }
+
+        .xs-visible {
+            display: none !important;
+            @include media('<tablet') {
+                display: block !important;
+            }
+        }
+    }
+
+    &.news-section {
+        padding-top: 100px;
+        padding-bottom: 5px;
+        @include media('<tablet') {
+            padding-top: 5px;
+        }
+        .pages-nav {
+            @include media('<tablet') {
+                margin-bottom: 30px;
+            }
+            a {
+                border-radius: 12px 0 0 12px;
+                @include media('<tablet') {
+                    border-radius: 0 !important;
+                }
+                &:last-child {
+                    border-radius: 0 12px 12px 0;
+                    @include media('<tablet') {
+                        display: none;
+                    }
+                }
+                &:first-child {
+                    display: block !important;
+                    .link-text:after {
+                        @include media('<tablet') {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .last-news {
+            @include media('<phone') {
+                margin-bottom: 40px;
             }
         }
     }
@@ -54,6 +146,7 @@
             transform: translateX(0);
         }
         a {
+            @include animate(opacity);
             font-family: $alt-font-2;
             display: block;
             font-size: 29px;
@@ -63,6 +156,9 @@
             background-color: $dark-grey;
             border-radius: 0 0 0 12px;
             text-decoration: none;
+            &:hover {
+                opacity: .7;
+            }
             @include media('<tablet') {
                 padding: 0 50px;
                 border-radius: 0;
@@ -114,6 +210,7 @@
     padding: 35px 0 45px;
     @include media('<tablet') {
         padding: 25px 0;
+        flex-wrap: wrap;
     }
     .left-side,
     .right-side {
@@ -125,16 +222,13 @@
     &.different-size {
         .left-side {
             width: 40%;
-
             @include media('<desktop') {
                 width: 50%;
             }
         }
-
         .right-side {
             width: 60%;
             padding-left: 4.5%;
-
             @include media('<desktop') {
                 padding-left: 2%;
                 width: 50%;
@@ -269,6 +363,10 @@
         .img-holder {
             display: flex;
             transform: translateX(-20px);
+            @include media('<tablet') {
+                margin-bottom: 30px;
+                transform: translateX(0);
+            }
             &:first-child {
                 align-items: flex-end;
             }
@@ -310,6 +408,16 @@
         background-size: contain;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        @include media('<tablet') {
+            padding: 35px 130px 35px 85px;
+            margin-bottom: 18px;
+        }
+        @include media('<phone') {
+            padding: 35px 65px 35px 20px;
+        }
+        @include media('<350px') {
+            padding: 20px 35px 20px 5px;
+        }
         .inner-content {
             max-width: 285px;
             text-align: center;
@@ -321,18 +429,22 @@
             font-size: 32px;
             line-height: 1.2;
             margin-bottom: 20px;
-
             @include media('<widescreen') {
                 font-size: 26px;
+            }
+            @include media('<phone') {
+                margin-bottom: 12px;
             }
         }
         .number {
             font-family: $alt-font-1;
             font-size: 102px;
             line-height: 1;
-
             @include media('<widescreen') {
                 font-size: 82px;
+            }
+            @include media('<phone') {
+                line-height: .7;
             }
         }
         .bottom-text {
@@ -345,6 +457,9 @@
         display: flex;
         justify-content: center;
         padding-top: 25px;
+        @include media('<phone') {
+            padding-top: 15px;
+        }
         .logo-holder {
             margin-right: 25px;
             &:first-child {
@@ -362,6 +477,29 @@
         }
     }
 
+    .text-imgage-block {
+        display: flex;
+        margin-bottom: 20px;
+        .img-holder {
+            width: 200px;
+            @include media('<phone') {
+                display: none;
+            }
+        }
+        .split-text-row {
+            display: flex;
+            align-items: center;
+            .percentage {
+                font-family: $alt-font-1;
+                font-size: 46px;
+                margin-right: 20px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .strong {
         display: inline-block;
         line-height: .7;
@@ -369,11 +507,47 @@
         font-family: $alt-font-1;
         text-transform: uppercase;
         font-weight: 400;
-        @include media('<phone') {
+        @include media('<tablet') {
+            width: 100%;
 		    text-align: center;
 		}
+        &.underline {
+            font-size: 62px;
+            padding-bottom: 6px;
+            position: relative;
+            line-height: .6;
+            @include media('<tablet') {
+                line-height: .8;
+            }
+            br {
+                display: none;
+                @include media('<tablet') {
+                    display: block;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                background-color: $dark-grey;
+                width: 97%;
+                @include media('<phone') {
+                    display: none;
+                }
+            }
+        }
+        .cursive {
+            font-family: $alt-font-2;
+            color: $dark-grey;
+            text-transform: none;
+            letter-spacing: -.9px;
+            @include media('<tablet') {
+                font-size: 52px;
+            }
+        }
     }
-
     .uppercase {
         display: inline-block;
         font-family: $alt-font-1;
@@ -403,12 +577,23 @@
     }
 
     .simple-text {
+        @include media('<tablet') {
+            br {
+                display: none;
+            }
+        }
         p {
             margin-bottom: 18px;
             line-height: 1.4;
+            @include media('<phone') {
+                margin-bottom: 15px;
+            }
         }
         .marked-orange {
             margin-bottom: 5px;
+            @include media('<phone') {
+                margin-bottom: 1px;
+            }
         }
     }
 
@@ -437,12 +622,10 @@
 
     .single-text {
         margin-bottom: 10px;
-
         &.small {
             font-size: 12px;
         }
     }
-
     .cursive-text {
         font-family: $alt-font-2;
         font-size: 32px;
@@ -450,7 +633,36 @@
         @include media('<desktop') {
             font-size: 26px;
         }
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
     }
+
+    .boxed-text-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 28px;
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+        .boxed-text {
+            width: 48%;
+            padding: 40px 22px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+            @include media('<phone') {
+                width: 100%;
+                min-height: 160px;
+                margin-bottom: 16px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+
     .xs-hidden {
     	@include media('<phone') {
             display: none;
@@ -466,10 +678,18 @@
 
 .marked-text-holder {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 15px;
+    @include media('<phone') {
+        display: inline-block;
+        padding-left: calc((100vw - 211px)/2);
+    }
     .text-column {
         width: 50%;
+        @include media('<phone') {
+            width: 100%;
+        }
     }
     .marked-text {
         font-family: $alt-font-2;
@@ -477,31 +697,6 @@
         &:before {
             width: 18px;
             height: 18px;
-        }
-    }
-}
-
-.boxed-text-holder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 28px;
-	@include media('<tablet') {
-		margin-bottom: 20px;
-	}
-    .boxed-text {
-        width: 48%;
-        padding: 40px 22px;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
-        @include media('<phone') {
-            width: 100%;
-            min-height: 160px;
-            margin-bottom: 16px;
-        }
-        p {
-            text-align: center;
         }
     }
 }

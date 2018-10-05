@@ -18,7 +18,6 @@ const innerNav = (() => {
             }
             $typeCategory.click(function() {
                 $(this).toggleClass('visible-menu');
-                console.log(11)
             });
         } else {
             $typeCategory.click(function() {

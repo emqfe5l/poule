@@ -1,88 +1,215 @@
 .prefooter-bg {
-	padding: 20px 0 70px;
+    padding: 20px 0 70px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+    @include media('<phone') {
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-color: #fff;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .image-holder {
+        margin: 0 45px 0 85px;
+
+        @include media('<desktop') {
+            margin: 0 25px 0 15px;
+        }
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .text-holder {
+        max-width: 670px;
+        text-align: center;
+
+        @include media('<tablet') {
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 102px;
+            line-height: .6;
+            margin-bottom: 20px;
+
+            @include media('<desktop') {
+                font-size: 72px;
+            }
+
+            @include media('<desktop') {
+                font-size: 82px;
+            }
+        }
+    }
+
+    .text-field {
+        .text-row {
+        	@include media('<phone') {
+        		text-align: center;
+        	}
+            &:first-child {
+                margin-bottom: 15px;
+                @include media('<phone') {
+                	margin-bottom: 0;
+                }
+                .label {
+                    &:nth-child(2) {
+                        display: inline-block;
+                        transform: translateY(30px);
+
+                        @include media('<desktop') {
+                            transform: translate(33%, 60%);
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                text-align: left;
+                padding-left: 10%;
+                @include media('<phone') {
+                	padding-left: 0;
+                	text-align: center;
+                }
+            }
+
+            .label {
+                font-family: $alt-font-1;
+                color: $orange;
+                font-size: 64px;
+                line-height: 1;
+
+                @include media('<desktop') {
+                    font-size: 46px;
+                }
+
+                &.bg {
+                    background-color: $orange;
+                    color: $white;
+                    margin-right: 16%;
+                    padding: 0 18px;
+                }
+
+                &.cursive {
+                    font-family: $alt-font-2;
+                    font-size: 56px;
+                    margin-right: 3.5%;
+                    @include media('<desktop') {
+                        font-size: 32px;
+                    }
+                    @include media('<phone') {
+                    	margin-right: 5px;
+                    }
+                }
+
+                &.cursive.bg {
+                    display: inline-block;
+                    line-height: 1.1;
+                    font-size: 44px;
+                    margin-right: 0;
+                    margin-left: 15px;
+                    padding: 0 8px;
+                    transform: translateY(-10px);
+
+                    @include media('<desktop') {
+                        font-size: 32px;
+                    }
+                    @include media('<phone') {
+                    	margin-left: 0;
+                    }
+                }
+            }
+        }
+        .xs-hidden {
+            @include media('<phone') {
+                display: none !important;
+            }
+        }
+
+        .xs-visible {
+            display: none !important;
+            @include media('<phone') {
+                display: block !important;
+            }
+        }
+    }
+}
+
+.prefooter-white {
+	background-color: #fff;
+	padding: 60px 0;
+	@include media('<phone') {
+		padding: 40px 0;
+	}
 	.container {
 		display: flex;
+		flex-wrap: wrap;
+	}
+	.boxed-text-holder {
+		width: 50%;
+		display: flex;
+		padding: 8px 0;
+		margin-bottom: 0;
+		@include media('<tablet') {
+			width: 100%;
+			width: calc(100% + 20px);
+        	margin-left: -10px;
+        	margin-right: -10px;
+        	margin-bottom: 30px;
+		}
+	}
+	.boxed-text {
+		display: flex;
+		width: 100%;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 15px 35px;
+        border-radius: 28px 0 28px 28px;
+        background-color: $orange;
+        color: $white;
+        text-align: center;
+        margin-right: 40px;
+        font-size: 18px;
+        @include media('<tablet') {
+        	margin: 0;
+        	border-radius: 0;
+        	padding: 35px 12px 20px 12px;
+        }
+        .title {
+        	font-size: 82px;
+        	line-height: .6;
+        	margin-bottom: 5px;
+        }
+        .bold {
+        	font-weight: 700;
+        	margin-bottom: 10px;
+        }
+        p {
+        	margin-bottom: 18px;
+        	line-height: 1.2;
+        }
+        a {
+        	color: $white;
+        	@include media('<phone') {
+        		display: none;
+        	}
+        }
 	}
 	.image-holder {
-		margin: 0 45px 0 85px;
-		@include media('<desktop') {
-			margin: 0 25px 0 15px;
-		}
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		@include media('<tablet') {
-			display: none;
-		}
-	}
-	.text-holder {
-		max-width: 670px;
-		text-align: center;
-		@include media('<tablet') {
-			margin: 0 auto;
-		}
-		.title {
-			font-size: 102px;
-			line-height: .6;
-			margin-bottom: 20px;
-			@include media('<desktop') {
-				font-size: 72px;
-			}
-			@include media('<desktop') {
-				font-size: 82px;
-			}
-		}
-	}
-	.text-field {
-		.text-row {
-			&:first-child {
-				margin-bottom: 15px;
-				.label {
-					&:nth-child(2) {
-						display: inline-block;
-						transform: translateY(30px);
-						@include media('<desktop') {
-							transform: translate(33%,60%);
-						}
-					}
-				}
-			}
-			&:last-child {
-				text-align: left;
-				padding-left: 10%;
-			}
-			.label {
-				font-family: $alt-font-1;
-				color: $orange;
-				font-size: 64px;
-				line-height: 1;
-				@include media('<desktop') {
-					font-size: 46px;
-				}
-				&.bg {
-					background-color: $orange;
-					color: $white;
-					margin-right: 16%;
-					padding: 0 18px;
-				}
-				&.cursive {
-					font-family: $alt-font-2;
-					font-size: 56px;
-					margin-right: 3.5%;
-					@include media('<desktop') {
-						font-size: 32px;
-					}
-				}
-				&.cursive.bg {
-					display: inline-block;
-					line-height: 1.1;
-					font-size: 44px;
-					margin-right: 0;
-					margin-left: 15px;
-					padding: 0 8px;
-					transform: translateY(-10px);
-					@include media('<desktop') {
-						font-size: 32px;
-					}
-				}
-			}
+			width: 100%;
 		}
 	}
 }
