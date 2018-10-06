@@ -2,52 +2,42 @@
     background-image: url('../images/fullscreenbg.jpg');
     min-height: 620px;
     padding: 25px 0 10px;
-
     h2 {
         font-family: 'campersans_regular';
         font-weight: normal;
-
         @include media('<tablet') {
             font-size: 62px;
             line-height: 0.5;
         }
     }
-
     .section-headings {
         margin-bottom: 15px;
-
         &__introduction {
             @include media('<tablet') {
                 display: none;
             }
         }
     }
-
     &__body {
         display: flex;
         align-items: center;
         justify-content: center;
-
         @include media('<tablet') {
             display: block;
             margin: 0 -15px 5px;
         }
     }
-
     &__items-wrapper {
         display: flex;
         width: 100%;
-
         @include media('<900px') {
             flex-wrap: wrap;
             justify-content: center;
         }
-
         @include media('<tablet') {
             display: block;
         }
     }
-
     &__item {
         background-size: 100% 100%;
         width: 33.3%;
@@ -55,16 +45,13 @@
         color: $white;
         text-decoration: none;
         display: block;
-
         &:hover {
             cursor: pointer;
         }
-
         @include media('<900px') {
             width: 50%;
             margin-bottom: 25px;
         }
-
         @include media('<tablet') {
             width: 100%;
             margin: 0;
@@ -72,96 +59,76 @@
             text-align: center;
             width: 100%;
         }
-
         &:nth-child(1) {
             background-image: url('../images/bulle-blue.svg');
-
             @include media('<tablet') {
                 background-color: #005f85;
                 background-image: none;
             }
-
             .products__item-title {
                 &:before {
                     background-image: url('../images/cuire.svg');
                     left: -20px;
-
                     @include media('<tablet') {
                         left: -70px;
                     }
                 }
             }
-
             .products__item-description {
                 color: #87bee8;
-
                 @include media('<tablet') {
                     display: none;
                 }
             }
         }
-
         &:nth-child(2) {
             background-image: url('../images/bulle-yellow.svg');
-
             @include media('<900px') {
                 order: 1
             }
-
             @include media('<tablet') {
                 background-color: #fcc300;
                 background-image: none;
             }
-
             .products__item-title {
                 &:before {
                     background-image: url('../images/rechauffer.svg');
                     left: -50px;
-
                     @include media('<tablet') {
                         left: -60px;
                     }
                 }
             }
-
             .products__item-description {
                 color: #b17400;
-
                 @include media('<tablet') {
                     display: none;
                 }
             }
         }
-
         &:nth-child(3) {
             background-image: url('../images/bulle-purple.svg');
-
             @include media('<tablet') {
                 background-color: #882973;
                 background-image: none;
             }
-
             .products__item-title {
                 &:before {
                     background-image: url('../images/servir.svg');
                     left: -20px;
-
                     @include media('<tablet') {
                         left: -70px;
                     }
                 }
             }
-
             .products__item-description {
                 color: #ec6ea6;
-
                 @include media('<tablet') {
                     display: none;
                 }
             }
         }
     }
-
     &__item-title {
         font-family: $alt-font-2;
         font-size: 50px;
@@ -171,7 +138,6 @@
         line-height: .7;
         padding-top: 60px;
         position: relative;
-
         &:before {
             content: '';
             position: absolute;
@@ -182,13 +148,11 @@
             left: -60px;
             top: 50%;
             transform: translateY(25%);
-
             @include media('<tablet') {
                 transform: translateY(0);
                 top: 10px;
             }
         }
-
         @include media('<tablet') {
             padding: 20px 0;
             font-size: 29px;
@@ -196,95 +160,78 @@
             display: inline-block;
             margin-left: 60px;
         }
-
         .stroke-wrapper {
             font-family: $alt-font-1;
             font-size: 80px;
             display: block;
-
             @include media('<tablet') {
                 display: inline;
                 font-size: 41px;
             }
         }
     }
-
     &__item-description {
         font-family: $alt-font-2;
         font-size: 22px;
         text-align: center;
         max-width: 300px;
         margin: 0 auto;
-
         @include media('<1300px') {
             max-width: 220px;
         }
     }
-
     .section__links {
         display: flex;
         justify-content: space-around;
         padding: 20px 110px;
-
         @include media('<tablet') {
             flex-direction: column;
             padding: 30px 0px;
         }
-
         h3 {
             font-family: $alt-font-2;
             color: $orange;
             font-size: 32px;
             text-align: center;
-
             @include media('<tablet') {
                 margin-bottom: 12px;
                 padding: 0 50px;
             }
         }
-
         .form-wrapper {
             @include media('<phone') {
                 margin-bottom: 00px;
             }
         }
-
         .links-wrapper {
             h3 {
                 @include media('<phone') {
                     margin-bottom: 0px;
                 }
             }
-
         }
-
         .single-input-form {
             @include media('<tablet') {
                 margin-bottom: 27px;
             }
         }
     }
-
     .links {
         display: flex;
         flex-wrap: wrap;
         max-width: 400px;
         justify-content: center;
         align-items: center;
-
         @include media('<tablet') {
             max-width: none;
         }
-
         @include media('<phone') {
             padding-top: 0px;
             justify-content: space-between;
             align-items: space-between;
-
         }
-
         a {
-            @include animate(background-color);
+            @include animate(background-color color);
             min-width: 182px;
             border-radius: 10px;
             text-align: center;
@@ -296,11 +243,10 @@
             margin: 5px;
             background-color: $orange;
             display: inline-block;
-
             &:hover {
-                background-color: rgba($color: $orange, $alpha: .8);
+                background-color: $white;
+                color: $orange;
             }
-
             @include media('<tablet') {
                 min-width: 120px;
                 width: calc(50% - 10px);

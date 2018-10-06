@@ -1,5 +1,4 @@
 //class to add on wrapper when popup is activated
-
 .popup-active {
     &::before {
         content: '';
@@ -11,51 +10,69 @@
     }
 }
 
+.popup-opened {
+    overflow: hidden;
+    @include media('<tablet') {
+        overflow:auto;
+    }
+    .popup {
+        display: block !important;
+    }
+    #wrapper {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: -9999px;
+            right: -9999px;
+            top: -9999px;
+            bottom: -9999px;
+            background-color: rgba(0, 0, 0, .5);
+            z-index: 100;
+        }
+    }
+}
+
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 55;
-    background-color: rgba($color: $white, $alpha: .8);
+    background-color: rgba($color: $white, $alpha: .96);
     padding: 10px;
     border-radius: 25px 0 25px 25px;
     max-width: 100%;
+    z-index: 101;
     display: none;
-
-
     @include media('<tablet') {
+        max-height: 100vh;
         overflow: scroll;
         width: 100%;
+        overflow: auto;
     }
-
     // display: none;
     .section-headings {
         color: $dark-grey;
         max-width: 750px;
         margin: 0 auto 20px;
         position: relative;
-
+        width:100%;
         h2 {
             font-size: 72px;
-
             @include media('<tablet') {
                 font-size: 50px;
             }
         }
-
         &__introduction {
             font-weight: 300;
-
             @include media('<tablet') {
                 font-size: 12px;
             }
         }
-
         @include media('<widescreen') {
             max-width: 650px;
         }
-
         &::before {
             content: '';
             position: absolute;
@@ -66,49 +83,44 @@
             background-image: url('../images/poule-thumb.svg');
             background-size: contain;
             background-repeat: no-repeat;
-
             @include media('<widescreen') {
                 transform: translateX(-70%);
             }
-
             @include media('<tablet') {
                 display: none;
             }
         }
-
     }
-
     .container {
         width: 1260px;
-
         @include media('<widescreen') {
             width: auto;
             min-width: 800px;
         }
-
         @include media('<tablet') {
             min-width: 0;
-
         }
     }
-
     &__wrapper {
         max-width: 100%;
         display: flex;
         flex-direction: column
     }
-
+    a{
+        text-decoration: none;
+    }
     &__body {
         display: flex;
         justify-content: space-between;
         margin: 0 -15px;
-
+        @include media('<desktop') {
+            justify-content: center;
+        }
         @include media('<tablet') {
             flex-direction: column;
             align-items: center;
         }
     }
-
     &__item {
         @include animate(background-color);
         width: 33.3%;
@@ -120,44 +132,38 @@
         margin: 10px;
         border-radius: 25px 0 25px 25px;
         cursor: pointer;
-
+        @include media('<desktop') {
+            width: 28%;
+        }
         @include media('<tablet') {
             height: 190px;
             padding: 10px;
             width: 100%;
         }
-
         svg {
             margin-bottom: 15px;
             width: 120px;
             height: 110px;
-
             path {
                 @include animate(fill);
                 fill: $orange;
             }
         }
-
         &:hover {
             background-color: $orange;
-
             svg path {
                 fill: $white;
             }
-
             .popup__item-title {
                 color: $white
             }
         }
-
         img {
             margin-bottom: 20px;
-
             @include media('<tablet') {
                 max-width: 40%;
             }
         }
-
         &-title {
             @include animate(color);
             color: $orange;
@@ -166,11 +172,8 @@
             font-size: 44px;
             line-height: 0.6;
             text-align: center;
-
             @include media('<tablet') {
-
                 margin-bottom: 0;
-
             }
         }
     }

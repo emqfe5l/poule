@@ -67,6 +67,8 @@
                 display: block;
                 background-color: $orange;
                 padding: 5px 20px;
+                outline:none !important;
+            border:none !important;
                 @include animate(right width z-index);
                 @include media('<tablet') {
                     border: 1px solid rgba(255, 255, 255, .5);

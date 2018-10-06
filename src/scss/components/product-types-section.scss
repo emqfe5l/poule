@@ -102,20 +102,34 @@
             min-width: 220px;
             border-radius: 8px;
             font-family: $alt-font-2;
-            @include animate(opacity);
+            @include animate(background-color color);
             @include media('<tablet') {
               margin-bottom: 9px;
             }
-            &:hover {
-                opacity: .8;
-            }
+            position: relative;
             img {
                 width: 26px;
                 margin-right: 5px;
+                & + img{
+                    position: absolute;
+                    top: 11px;
+                    left: 14px;
+                    opacity: 0;
+                }
             }
             &.btn-drop {
                 background-color: $white;
                 color: #009b2d;
+                &:hover{
+                    background-color: #009b2d;
+                    color:$white;
+                    img:first-child{
+                        opacity: 0;
+                    }
+                    img + img{
+                        opacity: 1;
+                    }
+                }
             }
             .ttu {
                 text-transform: uppercase;
@@ -123,9 +137,20 @@
                 font-size: 40px;
             }
             &.btn-frozen {
-                background-color: #03acee;
-                &:hover {
-                    color: $white;
+                background-color: #fff;
+                color:#03acee;
+                img + img{
+                 top:17px;
+                }
+                &:hover{
+                    background-color: #03acee;
+                    color:$white;
+                    img:first-child{
+                        opacity: 0;
+                    }
+                    img + img{
+                        opacity: 1;
+                    }
                 }
             }
         }

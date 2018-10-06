@@ -59,6 +59,7 @@
         flex-wrap: wrap;
         padding-bottom: 40px;
         padding-left: 0;
+        justify-content: center;
     }
     @include media('<tablet') {
         padding-bottom: 9px;

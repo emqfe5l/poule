@@ -17,21 +17,18 @@ const innerNav = (() => {
         });
         $('.search-holder').click(
             function() {
-                console.log(1)
+        
                 setTimeout($(this).addClass('open'), 10000);
-
+                $(document).on("click", function(e) {
+                    if ($('.search-holder').hasClass('open')) {
+                   
+                        if (($(e.target).is(".search-holder") === false) && ($(e.target).is(".search-holder input") === false)) {
+                            $(".search-holder").removeClass("open");
+                        }
+                    }
+                });
             }
         )
-        if ($(window).width() >= 768) {
-            $(document).on("click", function(e) {
-                if ($('.search-holder').hasClass('open')) {
-                    console.log(2)
-                    if ($(e.target).is(".search-holder input") === false) {
-                        $(".search-holder").removeClass("open");
-                    }
-                }
-            });
-        }
         let $typeCategory = $('.type-category');
         if ($(window).width() < 768) {
 

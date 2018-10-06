@@ -1,15 +1,22 @@
 .restauration {
     position: relative;
-    background-image: url('../images/pattes.svg');
-    background-repeat: no-repeat;
+    //background-image: url('../images/pattes.svg');
+    //background-repeat: no-repeat;
     min-height: 690px;
     background-position: 300px 0;
     padding-top: 34px;
+    .pattes-holder {
+        position: absolute;
+        left: 300px;
+        top: -34px;
+        @include media('<1400px') {
 
-    @include media('<1400px') {
-        background-position: 100px 0;
+            left: 100px;
+        }
+        @include media('<tablet') {
+         display: none;
+        }
     }
-
     @include media('<tablet') {
         background-image: none;
         padding-bottom: 30px;
@@ -18,27 +25,22 @@
     .container {
         position: relative;
     }
-
     .poule-holder {
         position: absolute;
         left: 538px;
         top: 380px;
-
         @include media('<1400px') {
             left: 340px;
         }
-
         @include media('<tablet') {
             position: static;
             display: flex;
             flex-direction: column;
-
             img {
                 order: 1;
                 margin-top: -10px;
             }
         }
-
         .content-block {
             position: absolute;
             width: 500px;
@@ -49,7 +51,6 @@
             left: -100%;
             font-size: 16px;
             box-shadow: 0 0 25px 0 #888;
-
             @include media('<tablet') {
                 position: static;
                 width: auto;
@@ -60,23 +61,18 @@
             }
         }
     }
-
-
     .section-headings {
         padding-left: 0px;
         position: absolute;
         left: 460px;
-
+        
         @include media('<1400px') {
             left: 240px;
         }
-
         @include media('<tablet') {
             position: static;
-
         }
     }
-
     h2 {
         font-family: 'campersans_regular';
         font-size: 102px;
@@ -84,35 +80,28 @@
         font-weight: normal;
         text-align: left;
         color: $dark-grey;
-
         @include media('<tablet') {
             text-align: center;
             font-size: 82px;
         }
-
         .stroke-wrapper {
             &:nth-of-type(1) {
                 font-family: 'grandhotel_regular';
                 text-transform: lowercase;
                 font-size: 55px;
                 line-height: 1.2;
-
                 @include media('<tablet') {
                     font-size: 41px;
                 }
             }
-
             &:nth-of-type(2) {
                 font-size: 58px;
-
                 @include media('<tablet') {
                     font-size: 48px;
                 }
             }
         }
-
     }
-
     .restautation-img-holder {
         position: absolute;
         top: 50px;
@@ -122,25 +111,26 @@
         border-radius: 5% 2px 5% 5%;
         overflow: hidden;
         box-shadow: 0 0 10px 0 #000;
-
         img {
             vertical-align: top;
         }
-
         @include media('<1400px') {
             left: 580px;
             max-width: 45%;
             min-width: 150px;
-
         }
-
         @include media('<tablet') {
             position: static;
             max-width: none;
             margin: 0 15px -1px;
             border-radius: 5% 0 0 0;
             box-shadow: none;
-
         }
+    }
+}
+#Pattes{
+    path{
+        opacity: 0;
+        @include animate(opacity .05);
     }
 }
