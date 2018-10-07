@@ -28,7 +28,7 @@ const innerNav = (() => {
                     }
                 });
             }
-        )
+        );
         let $typeCategory = $('.type-category');
         if ($(window).width() < 768) {
 

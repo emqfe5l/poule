@@ -7,6 +7,7 @@ import heroSwiper from './modules/heroSwiper';
 import offersSwiper from './modules/offersSwiper';
 import hamburger from './modules/hamburger';
 import innerNav from './modules/innerNavigation';
+import regionPicker from './modules/region-picker';
 
 (($) => {
     'use strict';
@@ -17,6 +18,7 @@ import innerNav from './modules/innerNavigation';
         offersSwiper.init();
         hamburger.init();
         innerNav.init();
+        regionPicker.init();
 
         function isScrolledIntoView(elem) {
             var docViewTop = $(window).scrollTop();
@@ -40,7 +42,7 @@ import innerNav from './modules/innerNavigation';
                         }
                     }
                 });
-            }
+            };
         }
     });
 
