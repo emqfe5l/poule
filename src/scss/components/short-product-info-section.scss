@@ -68,6 +68,7 @@
             border-radius: 28px 0 28px 28px;
             padding: 37px 30px;
             position: relative;
+            z-index: 1;
             @include media('<desktop') {
                 padding: 20px 15px;
                 position: static;

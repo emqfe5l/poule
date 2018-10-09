@@ -2,32 +2,33 @@
     background-color: $dark-grey;
     display: flex;
     align-items: center;
-
     @include media('<tablet') {
         padding-bottom: 15px;
     }
-
     .container {
         width: 1260px;
         padding-left: 230px;
         position: relative;
-
+        @include media('<desktop') {
+            padding-left: 10%;
+        }
         @include media('<tablet') {
             padding: 0;
         }
     }
-
     .logo {
         position: absolute;
         bottom: 0;
         left: 75px;
         max-width: 190px;
         overflow: hidden;
-
         @include media('<1100px') {
-            max-width: 125px;
+            position: absolute;
+            top: -16px;
+            left: -1px;
+            max-width: 12%;
+            overflow: visible;
         }
-
         @include media('<tablet') {
             position: relative;
             bottom: auto;
@@ -38,73 +39,62 @@
             padding-bottom: 24px;
             max-width: 155px;
         }
-
         img {
             vertical-align: top;
             margin-bottom: -13px;
         }
     }
-
     &__wrapper {
         display: flex;
         justify-content: space-around;
         min-height: 107px;
-
         @include media('<tablet') {
             flex-direction: column;
         }
     }
-
     &__nav {
         display: flex;
         align-items: center;
         margin-right: 10px;
-
         @include media('<tablet') {
             margin-right: 0;
         }
-
         ul {
             @extend %listreset;
             display: flex;
             align-items: center;
-
             @include media('<tablet') {
                 flex-direction: column;
-
             }
         }
     }
-
     &__nav-wrapper {
         @include media('<tablet') {
             width: 100%;
             margin-bottom: 10px;
         }
     }
-
     &__nav-item {
         margin: 0 10px;
-
         @include media('<1100px') {
             margin: 0px 6px;
             text-align: center;
         }
-
         @include media('<tablet') {
             margin: 0;
             padding: 10px;
         }
-
         a {
             @include animate(color);
             color: $white;
             text-decoration: none;
             font-size: 12px;
-            @include media('<tablet'){
+            @include media('<desktop') {
+                font-size: 11px;
+            }
+            @include media('<tablet') {
                 font-size: 14px;
             }
-
             &:hover {
                 color: $orange;
             }
