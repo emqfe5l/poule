@@ -54,6 +54,14 @@ import regionPicker from './modules/region-picker';
         }
         detectIE();
 
+
+        if ($('.pages-nav').length) {
+            $('.pages-nav > .active').on('click', function (e) {
+                e.preventDefault();
+                $(this).siblings().toggleClass('show');
+            });
+        }
+
      
     });
 

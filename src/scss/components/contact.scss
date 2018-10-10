@@ -109,11 +109,15 @@
             padding: 20px 12px 20px 5px;
             border-radius: 28px 0 28px 28px;
             margin-bottom: 30px;
-
+            @include media('<phone') {
+                border-radius: 0;
+            }
             .img-holder {
                 width: 60px;
                 margin-right: 20px;
-
+                @include media('<phone') {
+                    display: none;
+                }
                 img {
                     width: 100%;
                     height: auto;
@@ -127,7 +131,9 @@
                 color: $white;
                 font-weight: 700;
                 font-size: 16px;
-
+                @include media('<phone') {
+                    width: 100%;
+                }
                 li {
                     width: 100%;
                     margin-bottom: 3px;
@@ -336,6 +342,7 @@
             font-size: 16px;
             font-weight: 500;
             line-height: 2;
+            height: 32px;
             color: $white;
 
             @include placeholder {

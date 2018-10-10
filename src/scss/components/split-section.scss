@@ -110,12 +110,14 @@
                 }
                 &:last-child {
                     border-radius: 0 12px 12px 0;
+                    order: 1;
                     @include media('<tablet') {
                         display: none;
                     }
                 }
                 &:first-child {
                     display: block !important;
+                    order: 0;
                     .link-text:after {
                         @include media('<tablet') {
                             display: block;
@@ -146,7 +148,7 @@
             transform: translateX(0);
         }
         a {
-            @include animate(opacity);
+            @include animate(background-color);
             font-family: $alt-font-2;
             display: block;
             font-size: 29px;
@@ -157,7 +159,7 @@
             border-radius: 0 0 0 12px;
             text-decoration: none;
             &:hover {
-                opacity: .7;
+                background-color: $orange;
             }
             @include media('<tablet') {
                 padding: 0 50px;
@@ -199,6 +201,12 @@
 					border-color: #fff transparent transparent transparent;
 					display: none;
             	}
+            }
+            &.show {
+                display: block !important;
+                .link-text:after {
+                    display: none !important;
+                }
             }
         }
     }
@@ -481,9 +489,15 @@
         display: flex;
         margin-bottom: 20px;
         .img-holder {
-            width: 200px;
-            @include media('<phone') {
+            width: 145px;
+            @include media('<desktop') {
                 display: none;
+            }
+        }
+        .split-text-holder {
+            width: calc(100% - 145px);
+            @include media('<desktop') {
+                width: 100%;
             }
         }
         .split-text-row {
@@ -516,7 +530,7 @@
             padding-bottom: 6px;
             position: relative;
             line-height: .6;
-            @include media('<tablet') {
+            @include media('<1300px') {
                 line-height: .8;
             }
             br {
