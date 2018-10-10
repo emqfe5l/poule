@@ -44,6 +44,17 @@ import regionPicker from './modules/region-picker';
                 });
             };
         }
+
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                $('body').addClass('ie');
+            }
+        }
+        detectIE();
+
+     
     });
 
 })(jQuery);
