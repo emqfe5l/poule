@@ -15,7 +15,6 @@
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
-
             }
             .hamburger {
                 color: $white;
@@ -50,7 +49,8 @@
         .search-holder {
             width: 55px;
             height: 100%;
-            height:50px;z-index: 99;
+            height: 50px;
+            z-index: 99;
             position: relative;
             @include media('<tablet') {
                 height: 35px;
@@ -73,8 +73,8 @@
                 display: block;
                 background-color: $orange;
                 padding: 5px 20px;
-                outline:none !important;
-            border:none !important;
+                outline: none !important;
+                border: none !important;
                 @include animate(right width z-index);
                 @include media('<tablet') {
                     border: 1px solid rgba(255, 255, 255, .5);
@@ -145,9 +145,9 @@
         align-items: center;
         justify-content: flex-end;
         position: relative;
-        .dropdown-item.has-drop{
+        .dropdown-item.has-drop {
             @include media('<tablet') {
-                width:100%;
+                width: 100%;
             }
         }
         .dropdown-content {
@@ -288,10 +288,10 @@
     opacity: 0;
     @include media('<tablet') {
         width: auto;
-        left: 0;
-        right: 0;
+        left: -10px;
+        right: -10px;
         transform: translate(0, 0);
-        margin: 0 -15px !important;
+       
     }
     &.is-active {
         opacity: 1;
